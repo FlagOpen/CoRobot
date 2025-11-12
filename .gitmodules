@@ -1,0 +1,18 @@
+[submodule "RoboCoin"]
+	path = RoboCoin
+	url = file:///Users/neoone/code/corobot-modules/RoboCoin
+[submodule "DataManage"]
+	path = DataManage
+	url = file:///Users/neoone/code/corobot-modules/DataManage
+[submodule "DataTrain"]
+	path = DataTrain
+	url = file:///Users/neoone/code/corobot-modules/DataTrain
+[submodule "DataCollect"]
+	path = DataCollect
+	url = file:///Users/neoone/code/corobot-modules/DataCollect
+[submodule "DataConvert"]
+	path = DataConvert
+	url = file:///Users/neoone/code/corobot-modules/DataConvert
+[submodule "DataForge"]
+	path = DataForge
+	url = file:///Users/neoone/code/corobot-modules/DataForge
