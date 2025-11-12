@@ -1,18 +1,18 @@
 [submodule "RoboCoin"]
 	path = RoboCoin
-	url = file:///Users/neoone/code/corobot-modules/RoboCoin
+	url = git@github.com:neo128/RoboCoin.git
 [submodule "DataManage"]
 	path = DataManage
-	url = file:///Users/neoone/code/corobot-modules/DataManage
+	url = git@github.com:neo128/DataManage.git
 [submodule "DataTrain"]
 	path = DataTrain
-	url = file:///Users/neoone/code/corobot-modules/DataTrain
+	url = git@github.com:neo128/DataTrain.git
 [submodule "DataCollect"]
 	path = DataCollect
-	url = file:///Users/neoone/code/corobot-modules/DataCollect
+	url = git@github.com:neo128/DataCollect.git
 [submodule "DataConvert"]
 	path = DataConvert
-	url = file:///Users/neoone/code/corobot-modules/DataConvert
+	url = git@github.com:neo128/DataConvert.git
 [submodule "DataForge"]
 	path = DataForge
-	url = file:///Users/neoone/code/corobot-modules/DataForge
+	url = git@github.com:neo128/DataForge.git
