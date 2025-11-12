@@ -1,0 +1,24 @@
+name: Submodules
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  verify-submodules:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout with submodules
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+          fetch-depth: 0
+      - name: Show git status
+        run: |
+          git status
+          git submodule status --recursive
+      - name: Verify submodules accessible
+        run: |
+          git -c protocol.file.allow=always submodule update --init --recursive
+          git submodule foreach --recursive 'echo OK: $name @ $(git rev-parse --short HEAD)'
+
