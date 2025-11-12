@@ -10,6 +10,7 @@
 
 ## 使用指南
 - 初始化子模块：`scripts/bootstrap.sh`
+- 更新所有子模块：`scripts/update-all.sh`
 - 同步子模块：`git submodule update --remote --merge`
 
 ## 结构

@@ -1,0 +1,39 @@
+# OS / Editor
+.DS_Store
+.idea/
+.vscode/
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+.env
+.venv*/
+.eggs/
+.pytest_cache/
+.tox/
+.coverage*
+
+# Node/JS
+node_modules/
+yarn.lock
+package-lock.json
+npm-debug.log*
+
+# Build artifacts
+build/
+dist/
+.target/
+.target/**
+coverage/
+
+# Others
+*.swp
+*.swo
