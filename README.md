@@ -12,6 +12,9 @@
 - 初始化子模块：`scripts/bootstrap.sh`
 - 更新所有子模块：`scripts/update-all.sh`
 - 同步子模块：`git submodule update --remote --merge`
+- 子模块批量执行：`scripts/foreach.sh '<command>'`
+- 批量更新远程地址：`scripts/set-remote-urls.sh --file mapping.txt`
+- 创建并绑定 GitHub 远程仓库（需 gh 已登录）：`scripts/create-github-remotes.sh --org <org> --visibility private`
 
 ## 结构
 - 子模块位于仓库根目录（同名文件夹）
