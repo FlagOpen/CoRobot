@@ -18,6 +18,10 @@ if [ -n "$MAP_FILE" ]; then
     [ "${name#\#}" != "$name" ] && continue  # skip comments
     echo "Setting $name => $url"
     git submodule set-url "$name" "$url"
+    # If submodule working tree exists, also update its 'origin' remote
+    if [ -d "$name/.git" ]; then
+      git -C "$name" remote set-url origin "$url" || true
+    fi
   done < "$MAP_FILE"
 else
   if [ $(( $# % 2 )) -ne 0 ]; then
@@ -28,6 +32,9 @@ else
     name="$1"; url="$2"; shift 2
     echo "Setting $name => $url"
     git submodule set-url "$name" "$url"
+    if [ -d "$name/.git" ]; then
+      git -C "$name" remote set-url origin "$url" || true
+    fi
   done
 fi
 
