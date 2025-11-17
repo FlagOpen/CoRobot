@@ -13,6 +13,7 @@
 - [Overview](#overview)
 - [Installation](#installation)
 - [Quick Start](#quick-start)
+- [Datasets](#datasets)
 - [Update & Maintenance](#update--maintenance)
 - [Community](#community)
 - [Projects](#projects)
@@ -74,6 +75,59 @@ git submodule foreach 'git status -sb'
      ```
 5. **发布与集成**
    - 利用 `RoboCoin` 进行数据/模型资产化管理，实现多本体共享。
+
+## Datasets
+
+- 数据集概览：
+  
+  ![RoboCOIN 平台与任务概览](assets/datasets/robocoin-platforms.png)
+  
+  ![RoboCOIN 分布统计](assets/datasets/robocoin-stats.png)
+
+- 资源地址：
+  - Hugging Face：https://huggingface.co/RoboCOIN
+  - ModelScope：https://modelscope.cn/organization/RoboCOIN
+  - 数据集持续更新，具体许可与版本以各数据集页面为准。
+
+- 数据格式范例（推荐 RTML/LeRobot 统一结构）：
+  ```text
+  dataset_root/
+    meta.yaml                      # 元信息（机器人、本体、任务、采集参数等）
+    trajectories/
+      000001/
+        rtml.json                  # 轨迹描述（任务、段落、帧级标注）
+        observations/
+          rgb/
+            000001.jpg
+            000002.jpg
+          depth/
+            000001.png
+        actions.npy                # 对应每帧的动作（可为关节或笛卡尔增量）
+        timestamps.csv             # 时间戳（与帧/动作对齐）
+      000002/
+        ...
+  ```
+
+- 使用方法：
+  1) 下载到本地
+     - 从 Hugging Face 组织页选择数据集后下载，或使用 Python 快速拉取：
+       ```python
+       from huggingface_hub import snapshot_download
+       snapshot_download(repo_id="RoboCOIN/<dataset_name>", repo_type="dataset", local_dir="data/<dataset_name>")
+       ```
+     - 从 ModelScope 组织页下载到本地目录 `data/<dataset_name>`（可用其网页下载或官方 SDK/CLI）。
+  2) 放置路径与校验
+     - 解压/同步至 `data/<dataset_name>`，确保包含 `trajectories/` 与元信息（如 `meta.yaml`）。
+  3) 转换（如需）
+     - 若为第三方格式，可用本仓工具链在 `DataConvert` 中统一到 RTML/LeRobot 规范，再进入后续流程。
+  4) 训练与评估
+     - 进入 `DataTrain`，指定数据根目录：
+       ```bash
+       cd DataTrain
+       python train.py --config configs/lerobot/rtml_multi.yaml --data_root ../data/<dataset_name>
+       ```
+  5) 预览与检索
+     - 使用 `DataManage` 进行元数据检索、可视化与下载管理。
 
 ## Update & Maintenance
 - 子模块 URL 默认指向本机本地路径（`file:///.../corobot-modules/<name>`），便于在未创建远程仓库前进行开发与联调。若需切换到 GitHub/GitLab：
