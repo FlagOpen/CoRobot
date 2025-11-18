@@ -75,10 +75,7 @@
   5) 预览与检索
      - 使用 `DataManage` 进行元数据检索、可视化与下载管理。
 
-## Community
-- **Issues**：欢迎在 [GitHub Issues](https://github.com/FlagOpen/CoRobot/issues) 反馈 bug、需求与数据协议建议。
-- **Discussions**：可在 Discussions（筹备中）进行方案交流与需求共建。
-- **Roadmap**：关注 [Projects](https://github.com/users/neo128/projects)（若无则以 Issue 标签追踪）了解迭代计划。
+
 
 ## DataManage
 
@@ -88,6 +85,10 @@
 
 ## DataForge
 
+## Community
+- **Issues**：欢迎在 [GitHub Issues](https://github.com/FlagOpen/CoRobot/issues) 反馈 bug、需求与数据协议建议。
+- **Discussions**：可在 Discussions（筹备中）进行方案交流与需求共建。
+- **Roadmap**：关注 [Projects](https://github.com/users/neo128/projects)（若无则以 Issue 标签追踪）了解迭代计划。
 
 ## Contributor
 感谢所有贡献者与多本体机器人伙伴！欢迎通过 PR、Issue 或社区讨论参与共建：
