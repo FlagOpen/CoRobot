@@ -44,8 +44,21 @@
 
 ## DataConvert
   ![RoboCOIN 数据转换](assets/DataConvert/DataConvert_info.png)
+
+- 数据集入库：编写数据 `yaml`文件（包含任务名、设备型号、场景、动作等），待校验完成后生成 `info` 元数据并入库。
+- 格式转换：编写转换配置文件，进行位置文件对齐和帧数检测，通过后执行正式转换，生成标准LeRobot格式数据集（涵盖`parquet`、`mp4` 与 `meta` 文件）。
+
+仓库更新中，敬请期待！
+
 ## DataForge
   ![RoboCOIN 数据处理](assets/DataForge/DataForge_info.png)
+
+- 数据清理：清除异常或不完整的 `episode`，过滤静止帧、跳帧、维度错位、字段缺失等问题。
+- 后处理与验证：修复轨迹抖动等质量问题，并通过 `Sim Replay` 进行一致性和可复现性验证。
+- 标注与整合：进行 `RoboCOIN` 数据集特有的三级层次化标注（场景标注、子任务标注与运动标注），将标注内容编入 `parquet` 与 `meta`文件中，生成最终的高质量 `CoRobot`格式数据。
+
+仓库更新中，敬请期待！
+
 
 ## Community
 - **Issues**：欢迎在 [GitHub Issues](https://github.com/FlagOpen/CoRobot/issues) 反馈 bug、需求与数据协议建议。
