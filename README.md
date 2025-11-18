@@ -7,7 +7,7 @@
 [![Made with Love](https://img.shields.io/badge/Made%20with-CoRobot-orange)](#corobot-10)
 
 具身数据开源框架 CoRobot 1.0——面向具身数据采集、转化、处理、检索、预览、下载和训练的全流程开源框架。其设计遵循“协同 (Collaboration)、一致 (Coherence)、聚合 (Collective)”三大核心理念，旨在通过一体化的数据基础设施提升多本体机器人数据的标准化程度与复用效率。
-
+![具身数据开源框架 CoRobot 1.0](assets/corobot/CoRobot%20Intro.png)
 
 ## News
 - **2025-11**：发布 CoRobot 1.0，发布RoboCoin数据集及对应工具。
