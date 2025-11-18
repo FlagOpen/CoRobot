@@ -1,0 +1,119 @@
+# CoRobot 1.0
+
+[![GitHub Repo stars](https://img.shields.io/github/stars/FlagOpen/CoRobot?style=social)](https://github.com/FlagOpen/CoRobot/stargazers)
+[![Issues](https://img.shields.io/github/issues/FlagOpen/CoRobot)](https://github.com/FlagOpen/CoRobot/issues)
+[![Last Commit](https://img.shields.io/github/last-commit/FlagOpen/CoRobot)](https://github.com/FlagOpen/CoRobot/commits)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/FlagOpen/CoRobot/pulls)
+[![Made with Love](https://img.shields.io/badge/Made%20with-CoRobot-orange)](#corobot-10)
+
+[English](README_en.md) | [中文](README.md)
+
+CoRobot 1.0 is an open embodied-data framework for end-to-end data collection, conversion, processing, retrieval, preview, download, and training. It follows three core principles—Collaboration, Coherence, and Collective—to improve standardization and reuse efficiency for multi-robot datasets through unified data infrastructure.
+
+![RoboCOIN Tech Stack](assets/corobot/process.png)
+
+![CoRobot 1.0 Overview](assets/corobot/CoRobot%20Intro.png)
+
+## Repository Modules
+| Module | Role | Highlights |
+| --- | --- | --- |
+| `RoboCoin` (`robocoin-lerobot`) | Data & model asset management | Multi-robot bimanual dataset: 16 robot bodies, 200k+ trajectories, 10+ scenes, 1,000+ tasks, 50+ skills, 500+ objects. |
+| `DataManage` | Data governance | Visual search: keyword search, visualization, helps targeted downloads. |
+| `DataTrain` | Model training | Unified training tools: quick integration/training for embodied models like OpenPI, RDT, DP. |
+| `DataCollect` | Data collection | Multi-robot collection tools: supports various robot bodies and teleoperation; integrated with vendors like RMY, SLAMTEC, Galactic, Unitree, Leju, Xinhaitu, Lingyu, ZhiYuan, etc. |
+| `DataConvert` | Data conversion | Conversion toolkit: bi-directional transforms among RLDS, HDF5, JSONL, and LeRobotDataset. |
+| `DataForge` | Data processing | Processing toolkit: defect filtering (static frames, frame drops, dimensional mismatch, missing fields, jitter) and enrichment labels (scene, sub-task, motion description). |
+
+## RoboCoin
+
+- Dataset overview:
+  
+  ![RoboCOIN Platforms & Tasks](assets/datasets/robocoin-platforms.png)
+  
+  ![RoboCOIN Distribution](assets/datasets/robocoin-stats.png)
+- `RoboCOIN` is a large-scale, multi-robot, bimanual dataset for manipulation, covering 15 robot platforms, 421 tasks across 16 scenes, and 180K demonstration trajectories.
+
+- Resources:
+  - Hugging Face: https://huggingface.co/RoboCOIN
+  - ModelScope: https://modelscope.cn/organization/RoboCOIN
+  - The datasets are continuously updated; licenses and versions follow each dataset page.
+
+## DataManage
+
+RoboCOIN visualization and management platform for online search, preview, filtering, and download.
+
+- **Online**: [https://flagopen.github.io/DataManage/](https://flagopen.github.io/DataManage/)
+
+- **Key features**:
+  - **Multi-dimensional filtering**: filter by scene, robot, end-effector, action, object, etc.
+  - **Instant preview**: auto-playing videos and detailed info with hover overlays
+  - **Intelligent search**: keyword search and Filter Finder for quick targeting
+  - **Cart management**: batch select/add/remove datasets with persisted selections
+  - **One-click download**: generate ModelScope/HuggingFace download commands; export Python scripts
+  - **Selection import/export**: save and restore filters in JSON for team collaboration
+
+- **UI preview**:
+  
+  ![DataManage Overview](assets/DataManage/Overview.png)
+  
+  ![DataManage Filter & Preview](assets/DataManage/Filter.png)
+  
+  ![DataManage Download CLI](assets/DataManage/DownloadCLI.png)
+
+## DataTrain
+
+## DataCollect
+
+DataCollect is a multi-robot data collection system.
+
+- **Core features**:
+- Multi-protocol streams (ROS1/ROS2, Dora, sockets)
+- Unified collection framework built on LeRobot
+- Multi-robot, multi-sensor fusion
+- Full pipeline for live capture, validation, and submission
+- Integrations with task system, annotation system, and training pipeline on the platform side
+
+It bridges on-device capabilities with platform AI services.
+
+![DataCollect Framework](assets/DataCollect/Framework.png)
+
+## DataConvert
+  ![RoboCOIN Data Conversion](assets/DataConvert/DataConvert_info.png)
+
+- Dataset ingest: author dataset `yaml` files (tasks, device models, scenes, actions, etc.), which are validated to produce `info` metadata for ingestion.
+- Format conversion: write conversion configs, align pose files and check frame counts, then run the official conversion to produce standard LeRobot datasets (including `parquet`, `mp4`, and `meta`).
+
+More updates coming soon.
+
+## DataForge
+  ![RoboCOIN Data Processing](assets/DataForge/DataForge_info.png)
+
+- Data cleaning: remove abnormal or incomplete episodes; filter static frames, dropped frames, dimensional mismatch, and missing fields.
+- Post-process & validation: fix trajectory jitter and verify consistency/reproducibility via Sim Replay.
+- Labeling & integration: add RoboCOIN-specific three-level labels (scene, sub-task, motion) and write them into `parquet` and `meta` to produce high-quality CoRobot datasets.
+
+More updates coming soon.
+
+## Community
+- **Issues**: Please report bugs, feature requests, or data protocol suggestions in [GitHub Issues](https://github.com/FlagOpen/CoRobot/issues).
+- **Discussions**: Coming soon for solution sharing and co-building.
+- **Roadmap**: Follow [Projects](https://github.com/users/neo128/projects) (or Issue labels) for iteration plans.
+
+## Contributor
+Thanks to all contributors and multi-robot partners! Join via PRs, Issues, or community discussions:
+- FlagOpen / CoRobot Team
+- Community volunteers (hope to see your name in `CONTRIBUTORS.md`)
+
+## Citation
+```bibtex
+@misc{corobot2024,
+  title        = {CoRobot 1.0: An Open Embodied Data Infrastructure for Multi-Robot Collaboration},
+  author       = {CoRobot Team},
+  year         = {2025},
+  publisher    = {FlagOpen},
+  howpublished = {\url{https://github.com/FlagOpen/CoRobot}}
+}
+```
+
+## License
+The main repo and submodules follow the licenses in their respective directories. For commercial use or large-scale deployments, please contact the maintainers; a unified open-source license will be announced in future versions.

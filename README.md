@@ -6,6 +6,8 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/FlagOpen/CoRobot/pulls)
 [![Made with Love](https://img.shields.io/badge/Made%20with-CoRobot-orange)](#corobot-10)
 
+[English](README_en.md) | [中文](README.md)
+
 具身数据开源框架 CoRobot 1.0——面向具身数据采集、转化、处理、检索、预览、下载和训练的全流程开源框架。其设计遵循“协同 (Collaboration)、一致 (Coherence)、聚合 (Collective)”三大核心理念，旨在通过一体化的数据基础设施提升多本体机器人数据的标准化程度与复用效率。
   ![RoboCOIN 技术路线](assets/corobot/process.png)
 
@@ -65,7 +67,7 @@ RoboCOIN 数据集可视化与管理平台，提供数据集在线检索、预�
 
 DataCollect 是一套面向多本体的数据采集系统。
 
--**核心功能**：
+- **核心功能**：
 - 多协议数据流接入（ROS1/ROS2、Dora、Sockets）
 - 基于 Lerobot 的统一采集框架
 - 多机器人、多传感器的数据融合
