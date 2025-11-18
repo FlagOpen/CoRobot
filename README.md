@@ -8,75 +8,11 @@
 
 具身数据开源框架 CoRobot 1.0——面向具身数据采集、转化、处理、检索、预览、下载和训练的全流程开源框架。其设计遵循“协同 (Collaboration)、一致 (Coherence)、聚合 (Collective)”三大核心理念，旨在通过一体化的数据基础设施提升多本体机器人数据的标准化程度与复用效率。
 
-## Table of Contents
-- [News](#news)
-- [Overview](#overview)
-- [Installation](#installation)
-- [Quick Start](#quick-start)
-- [Datasets](#datasets)
-- [Update & Maintenance](#update--maintenance)
-- [Community](#community)
-- [Projects](#projects)
-- [Model List](#model-list)
-- [Contributor](#contributor)
-- [Citation](#citation)
-- [License](#license)
 
 ## News
-- **2025-11**：发布 CoRobot 1.0，提供覆盖采集、转化、管理、训练的标准化管线。
-- **2025-11**：RTML 轨迹语义描述语言深度集成，实现跨机器人、多模态轨迹统一标注。
-- **2025-11**：完成基于 LeRobot 的多机器人数据采集示例与工具链升级。
+- **2025-11**：发布 CoRobot 1.0，发布RoboCoin数据集及对应工具。
 
-## Overview
-该框架基于 LeRobot 构建，支持多种机器人平台的数据采集与异构数据格式的统一转换，并深度融合机器人轨迹标记语言 RTML，以结构化约束保障轨迹数据的质量一致性。集成了基于大语言模型与规则工具的层次化标注流程，支持轨迹级、段级与帧级细粒度标注，并提供数据检索、可视化预览等功能，赋能多样化模型训练需求。通过模块化工具链与标准化数据管理，显著提升了具身智能数据的生产规范性、质量一致性与训练效率，助力多本体泛化研究与应用落地。
-
-核心能力：
-- **全流程**：覆盖采集、转化、处理、检索、预览、下载与训练七大阶段。 
-- **一致性**：RTML + 结构化约束确保多模态轨迹质量一致。 
-- **可扩展**：模块化工具链、Git submodule 设计方便独立开发与部署。
-
-## Installation
-> 推荐使用 macOS 或 Linux，需预装 Git、Python (>=3.10) 与常见机器人依赖。
-
-```bash
-git clone git@github.com:FlagOpen/CoRobot.git
-cd CoRobot
-git submodule update --init --recursive
-./scripts/bootstrap.sh         # 初始化所有子模块依赖
-git submodule foreach 'git status -sb'
-```
-
-常用辅助脚本：
-- `scripts/bootstrap.sh`：首次克隆后批量安装依赖。
-- `scripts/update-all.sh`：一键更新所有子模块到各自远端最新提交。
-- `scripts/foreach.sh '<command>'`：对子模块批量执行同一指令，适合 lint/test。
-- `scripts/set-remote-urls.sh --file mapping.txt`：批量切换子模块远程地址。
-- `scripts/create-github-remotes.sh --org <org> --visibility private`：基于 gh CLI 自动创建并绑定远程仓库。
-
-## Quick Start
-1. **拉起工作区**
-   ```bash
-   git clone git@github.com:FlagOpen/CoRobot.git
-   cd CoRobot
-   ./scripts/bootstrap.sh
-   git submodule update --remote --merge   # 跟踪外部提交
-   ```
-2. **采集具身数据**
-   - 在 `DataCollect` 中配置机器人驱动与任务脚本。
-   - 使用 RTML 描述采集任务与标注 schema，采集后数据默认写入 `DataCollect/output`。
-3. **转化与标注**
-   - `DataConvert` 负责将多源多模态数据标准化并生成 RTML 约束。
-   - `DataForge` & `DataManage` 用于批量处理、质检、检索与可视化预览。
-4. **训练模型**
-   - 进入 `DataTrain`，参考 `examples/lerobot` 或 `configs/*.yaml` 运行训练：
-     ```bash
-     cd DataTrain
-     python train.py --config configs/lerobot/rtml_multi.yaml --data_root <path>
-     ```
-5. **发布与集成**
-   - 利用 `RoboCoin`（FlagOpen/robocoin-lerobot）进行数据/模型资产化管理，实现多本体共享。
-
-## Datasets
+## RoboCoin Datasets
 
 - 数据集概览：
   
@@ -129,21 +65,6 @@ git submodule foreach 'git status -sb'
   5) 预览与检索
      - 使用 `DataManage` 进行元数据检索、可视化与下载管理。
 
-## Update & Maintenance
-- 子模块 URL 已切换为 FlagOpen 组织下的远程（其中 `RoboCoin` 对应 `robocoin-lerobot`）。若需切换到自定义 fork：
-  ```bash
-  git submodule set-url RoboCoin git@github.com:FlagOpen/robocoin-lerobot.git
-  git submodule set-url DataManage git@github.com:FlagOpen/DataManage.git
-  git submodule set-url DataTrain git@github.com:FlagOpen/DataTrain.git
-  git submodule set-url DataCollect git@github.com:FlagOpen/DataCollect.git
-  git submodule set-url DataConvert git@github.com:FlagOpen/DataConvert.git
-  git submodule set-url DataForge git@github.com:FlagOpen/DataForge.git
-  git add .gitmodules && git commit -m "chore: update submodule URLs"
-  git submodule sync --recursive
-  ```
-- 本地“子项目源码仓库”实际存放于仓库外 `../corobot-modules/<name>`，主仓库仅以 submodule 形式引用。
-- 在外部目录直接开发子项目，回到主仓库执行 `git submodule update --remote --merge` 即可同步提交。
-
 ## Community
 - **Issues**：欢迎在 [GitHub Issues](https://github.com/FlagOpen/CoRobot/issues) 反馈 bug、需求与数据协议建议。
 - **Discussions**：可在 Discussions（筹备中）进行方案交流与需求共建。
@@ -152,19 +73,13 @@ git submodule foreach 'git status -sb'
 ## Projects
 | 模块 | 角色 | 能力亮点 |
 | --- | --- | --- |
-| `RoboCoin` (`robocoin-lerobot`) | 数据与模型资产管理 | 提供资产上链、检索与权限控制能力，加速数据共享。 |
-| `DataManage` | 数据治理 | 集成元数据检索、预览、下载、审计等工具。 |
-| `DataTrain` | 模型训练 | 支持基于 LeRobot/RTML 的模仿学习、策略学习与多模态训练范式。 |
-| `DataCollect` | 数据采集 | 面向多机器人平台的采集工具链，支持实时监控与故障回溯。 |
-| `DataConvert` | 数据转化 | 将异构格式（ROS bags、视频、传感器流等）统一到 RTML/LeRobot 标准。 |
-| `DataForge` | 数据处理 | 自动化切分、质检、增强与层次化标注流水线。 |
+| `RoboCoin` (`robocoin-lerobot`) | 数据与模型资产管理 | 多本体双臂操作数据集，16 款本体、20 万+ 轨迹、10+ 场景、1000+ 任务、50+ 技能、500+ 物体。 |
+| `DataManage` | 数据治理 | 数据可视化检索：关键词检索、可视化展示，便于查询与针对性下载。 |
+| `DataTrain` | 模型训练 | 统一训练工具：支持 OpenPI、RDT、DP 等具身模型的快速接入与训练。 |
+| `DataCollect` | 数据采集 | 多本体数采工具：支持多种本体与遥操作，已接入睿尔曼、松灵、银河通用、宇树、乐聚、星海图、灵御、智元等。 |
+| `DataConvert` | 数据转化 | 数据格式转化工具：支持 RLDS、HDF5、JSONL 与 LeRobotDataset 的双向转换。 |
+| `DataForge` | 数据处理 | 数据处理工具：缺陷过滤（静止帧、跳帧、维度错位、字段缺失、轨迹抖动）与补充标注（场景、子任务、运动描述）。 |
 
-## Model List
-| 工作流 | 数据来源 | 说明 | 状态 |
-| --- | --- | --- | --- |
-| LeRobot-RTML 多本体模仿学习 | `DataCollect` + `DataConvert` + `DataTrain` | 以 RTML 描述轨迹，结合 LeRobot 训练策略克隆模型。 | ✅ 可用 |
-| 规则 + LLM 层次化标注模型 | `DataForge` | 结合规则校验与 LLM 审核，生成轨迹级/帧级标签。 | 🔄 迭代中 |
-| RoboCoin 多模态检索模型 | `DataManage` + `RoboCoin` (`robocoin-lerobot`) | 基于元数据与嵌入构建的检索/推荐模型，支持多模态查询。 | 🚧 规划中 |
 
 ## Contributor
 感谢所有贡献者与多本体机器人伙伴！欢迎通过 PR、Issue 或社区讨论参与共建：
