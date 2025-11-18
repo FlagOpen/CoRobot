@@ -63,6 +63,19 @@ RoboCOIN 数据集可视化与管理平台，提供数据集在线检索、预�
 
 ## DataCollect
 
+DataCollect 是一套面向多本体的数据采集系统。
+
+-**核心功能**：
+- 多协议数据流接入（ROS1/ROS2、Dora、Sockets）
+- 基于 Lerobot 的统一采集框架
+- 多机器人、多传感器的数据融合
+- 实时采集、校验、提交的完整流程支持
+- 与平台端任务系统、标注系统、模型训练系统的贯通
+
+它是将设备端能力与平台端AI能力连接起来的关键桥梁。
+
+![DataCollect 框架图](assets/DataCollect/Framework.png)
+
 ## DataConvert
   ![RoboCOIN 数据转换](assets/DataConvert/DataConvert_info.png)
 
