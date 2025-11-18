@@ -6,6 +6,8 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/FlagOpen/CoRobot/pulls)
 [![Made with Love](https://img.shields.io/badge/Made%20with-CoRobot-orange)](#corobot-10)
 
+[English](README_en.md) | [中文](README.md)
+
 具身数据开源框架 CoRobot 1.0——面向具身数据采集、转化、处理、检索、预览、下载和训练的全流程开源框架。其设计遵循“协同 (Collaboration)、一致 (Coherence)、聚合 (Collective)”三大核心理念，旨在通过一体化的数据基础设施提升多本体机器人数据的标准化程度与复用效率。
   ![RoboCOIN 技术路线](assets/corobot/process.png)
 
@@ -62,6 +64,19 @@
 ## DataTrain
 
 ## DataCollect
+
+DataCollect 是一套面向多本体的数据采集系统。
+
+- **核心功能**：
+- 多协议数据流接入（ROS1/ROS2、Dora、Sockets）
+- 基于 Lerobot 的统一采集框架
+- 多机器人、多传感器的数据融合
+- 实时采集、校验、提交的完整流程支持
+- 与平台端任务系统、标注系统、模型训练系统的贯通
+
+它是将设备端能力与平台端AI能力连接起来的关键桥梁。
+
+![DataCollect 框架图](assets/DataCollect/Framework.png)
 
 ## DataConvert
 **DataConvert**是一个专门用于具身数据格式转换的工具集，支持主流具身数据格式RLDS、HDF5LeRobotDataset、JSONL与LeRobot格式的双向转换，满足模型训练的多元化数据格式需求。
