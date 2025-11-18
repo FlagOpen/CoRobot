@@ -30,6 +30,7 @@
   ![RoboCOIN 平台与任务概览](assets/datasets/robocoin-platforms.png)
   
   ![RoboCOIN 分布统计](assets/datasets/robocoin-stats.png)
+- `RoboCOIN` 是一个面向双臂操作研究的、大规模多本体的高质量数据集，涵盖 `15` 种不同的机器人平台，在 `421` 个任务与 `16` 个场景下提供 `180K` 条示范轨迹。
 
 - 资源地址：
   - Hugging Face：https://huggingface.co/RoboCOIN
