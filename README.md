@@ -23,23 +23,23 @@
 | `DataConvert` | 数据转化 | 数据格式转化工具：支持 RLDS、HDF5、JSONL 与 LeRobotDataset 的双向转换。 |
 | `DataForge` | 数据处理 | 数据处理工具：缺陷过滤（静止帧、跳帧、维度错位、字段缺失、轨迹抖动）与补充标注（场景、子任务、运动描述）。 |
 
-## RoboCoin
+## RoboCOIN
+**RoboCOIN**是一个面向双臂操作研究的、大规模多本体的高质量数据集，涵盖 `15` 种不同的机器人平台，在 `421` 个任务与 `16` 个场景下提供 `180K` 条示范轨迹。
 
-- 数据集概览：
-  
-  ![RoboCOIN 平台与任务概览](assets/datasets/robocoin-platforms.png)
-  
-  ![RoboCOIN 分布统计](assets/datasets/robocoin-stats.png)
-- `RoboCOIN` 是一个面向双臂操作研究的、大规模多本体的高质量数据集，涵盖 `15` 种不同的机器人平台，在 `421` 个任务与 `16` 个场景下提供 `180K` 条示范轨迹。
-
-- 资源地址：
+- **资源地址**：
   - Hugging Face：https://huggingface.co/RoboCOIN
   - ModelScope：https://modelscope.cn/organization/RoboCOIN
   - 数据集持续更新，具体许可与版本以各数据集页面为准。
 
+- **数据集概览**：
+  
+  ![RoboCOIN 平台与任务概览](assets/datasets/robocoin-platforms.png)
+  
+  ![RoboCOIN 分布统计](assets/datasets/robocoin-stats.png)
+
 ## DataManage
 
-RoboCOIN 数据集可视化与管理平台，提供数据集在线检索、预览、筛选、下载的一站式解决方案。
+**RoboCOIN** 数据集可视化与管理平台，提供数据集在线检索、预览、筛选、下载的一站式解决方案。
 
 - **在线访问**：[https://flagopen.github.io/DataManage/](https://flagopen.github.io/DataManage/)
 
@@ -64,21 +64,24 @@ RoboCOIN 数据集可视化与管理平台，提供数据集在线检索、预�
 ## DataCollect
 
 ## DataConvert
+**DataConvert**是一个专门用于具身数据格式转换的工具集，支持主流具身数据格式RLDS、HDF5LeRobotDataset、JSONL与LeRobot格式的双向转换，满足模型训练的多元化数据格式需求。
+- **数据集入库**：编写数据 `yaml`文件（包含任务名、设备型号、场景、动作等），待校验完成后生成 `info` 元数据并入库。
+- **格式转换**：编写转换配置文件，进行位置文件对齐和帧数检测，通过后执行正式转换，生成标准LeRobot格式数据集（涵盖`parquet`、`mp4` 与 `meta` 文件）。
+- **技术路线概览**：
   ![RoboCOIN 数据转换](assets/DataConvert/DataConvert_info.png)
 
-- 数据集入库：编写数据 `yaml`文件（包含任务名、设备型号、场景、动作等），待校验完成后生成 `info` 元数据并入库。
-- 格式转换：编写转换配置文件，进行位置文件对齐和帧数检测，通过后执行正式转换，生成标准LeRobot格式数据集（涵盖`parquet`、`mp4` 与 `meta` 文件）。
-
-仓库更新中，敬请期待！
+  仓库更新中，敬请期待！
 
 ## DataForge
+**DataForge**是一套用于具身数据筛选和层次化标注的工具链，完成常规数据到高质量**CoRobot**数据的完善。对丢帧、卡顿、花屏、噪点、静止帧、黑白帧、关节信息不齐、时间戳错位等问题进行处理。对场景、任务、运动描述进行标注。
+- **数据前处理**：清除异常或不完整的 `episode`，过滤静止帧、跳帧等问题。
+- **后处理与验证**：修复轨迹抖动、维度错位、字段缺失等质量问题，并通过 `Sim Replay` 进行一致性和可复现性验证。
+- **标注与整合**：进行 `RoboCOIN` 数据集特有的三级层次化标注（场景标注、子任务标注与运动标注），将标注内容编入 `parquet` 与 `meta`文件中，生成最终的高质量 `CoRobot`格式数据。
+- **技术路线概览**： 
   ![RoboCOIN 数据处理](assets/DataForge/DataForge_info.png)
-
-- 数据清理：清除异常或不完整的 `episode`，过滤静止帧、跳帧、维度错位、字段缺失等问题。
-- 后处理与验证：修复轨迹抖动等质量问题，并通过 `Sim Replay` 进行一致性和可复现性验证。
-- 标注与整合：进行 `RoboCOIN` 数据集特有的三级层次化标注（场景标注、子任务标注与运动标注），将标注内容编入 `parquet` 与 `meta`文件中，生成最终的高质量 `CoRobot`格式数据。
-
-仓库更新中，敬请期待！
+- **层次化标注**：
+  ![RoboCOIN 层次化标注](assets/DataForge/Hierarchical_Annotation.png)
+  仓库更新中，敬请期待！
 
 
 ## Community
