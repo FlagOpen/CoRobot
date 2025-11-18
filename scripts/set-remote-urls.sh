@@ -3,7 +3,7 @@ set -euo pipefail
 
 # 批量设置子模块远程 URL
 # 用法：
-#   scripts/set-remote-urls.sh RoboCoin git@github.com:org/RoboCoin.git \
+#   scripts/set-remote-urls.sh RoboCOIN git@github.com:org/RoboCOIN.git \
 #                              DataManage git@github.com:org/DataManage.git ...
 # 或提供一个映射文件：每行 'name url'，传入 --file <path>
 
