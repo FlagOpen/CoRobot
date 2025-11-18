@@ -130,14 +130,14 @@ git submodule foreach 'git status -sb'
      - 使用 `DataManage` 进行元数据检索、可视化与下载管理。
 
 ## Update & Maintenance
-- 子模块 URL 按 `.gitmodules` 中配置的远程，`RoboCoin` 已切换为 `FlagOpen/robocoin-lerobot`。若需切换到自定义 fork：
+- 子模块 URL 已切换为 FlagOpen 组织下的远程（其中 `RoboCoin` 对应 `robocoin-lerobot`）。若需切换到自定义 fork：
   ```bash
   git submodule set-url RoboCoin git@github.com:FlagOpen/robocoin-lerobot.git
-  git submodule set-url DataManage <remote-url>
-  git submodule set-url DataTrain <remote-url>
-  git submodule set-url DataCollect <remote-url>
-  git submodule set-url DataConvert <remote-url>
-  git submodule set-url DataForge <remote-url>
+  git submodule set-url DataManage git@github.com:FlagOpen/DataManage.git
+  git submodule set-url DataTrain git@github.com:FlagOpen/DataTrain.git
+  git submodule set-url DataCollect git@github.com:FlagOpen/DataCollect.git
+  git submodule set-url DataConvert git@github.com:FlagOpen/DataConvert.git
+  git submodule set-url DataForge git@github.com:FlagOpen/DataForge.git
   git add .gitmodules && git commit -m "chore: update submodule URLs"
   git submodule sync --recursive
   ```

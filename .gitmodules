@@ -3,16 +3,16 @@
 	url = git@github.com:FlagOpen/robocoin-lerobot.git
 [submodule "DataManage"]
 	path = DataManage
-	url = git@github.com:neo128/DataManage.git
+	url = git@github.com:FlagOpen/DataManage.git
 [submodule "DataTrain"]
 	path = DataTrain
-	url = git@github.com:neo128/DataTrain.git
+	url = git@github.com:FlagOpen/DataTrain.git
 [submodule "DataCollect"]
 	path = DataCollect
-	url = git@github.com:neo128/DataCollect.git
+	url = git@github.com:FlagOpen/DataCollect.git
 [submodule "DataConvert"]
 	path = DataConvert
-	url = git@github.com:neo128/DataConvert.git
+	url = git@github.com:FlagOpen/DataConvert.git
 [submodule "DataForge"]
 	path = DataForge
-	url = git@github.com:neo128/DataForge.git
+	url = git@github.com:FlagOpen/DataForge.git
