@@ -1,5 +1,5 @@
-[submodule "RoboCoin"]
-	path = RoboCoin
+[submodule "RoboCOIN"]
+	path = RoboCOIN
 	url = git@github.com:FlagOpen/robocoin-lerobot.git
 [submodule "DataManage"]
 	path = DataManage
