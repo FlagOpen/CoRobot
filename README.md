@@ -38,6 +38,26 @@
 
 ## DataManage
 
+RoboCOIN 数据集可视化与管理平台，提供数据集在线检索、预览、筛选、下载的一站式解决方案。
+
+- **在线访问**：[https://flagopen.github.io/DataManage/](https://flagopen.github.io/DataManage/)
+
+- **核心功能**：
+  - **多维度筛选**：支持按场景、机器人、末端执行器、动作、操作对象等维度过滤数据集
+  - **实时预览**：数据集的视频自动播放与详情查看，支持悬浮信息层
+  - **智能搜索**：关键词搜索与 Filter Finder 快速定位目标数据集
+  - **购物车管理**：批量选择、添加、删除数据集，支持选择状态保持
+  - **一键下载**：生成 ModelScope/HuggingFace 下载命令，支持 Python 脚本导出
+  - **选择导入/导出**：JSON 格式保存与恢复筛选结果，便于团队协作
+
+- **界面展示**：
+  
+  ![DataManage 主界面](assets/DataManage/Overview.png)
+  
+  ![DataManage 筛选与预览](assets/DataManage/Filter.png)
+  
+  ![DataManage 下载命令生成](assets/DataManage/DownloadCLI.png)
+
 ## DataTrain
 
 ## DataCollect
