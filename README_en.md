@@ -26,17 +26,18 @@ CoRobot 1.0 is an open embodied-data framework for end-to-end data collection, c
 
 ## RoboCoin
 
-- Dataset overview:
+**RoboCOIN** is a large-scale, multi-robot, bimanual dataset for manipulation, covering 15 robot platforms, 421 tasks across 16 scenes, and 180K demonstration trajectories.
+
+- **Resources**:
+  - Hugging Face: https://huggingface.co/RoboCOIN
+  - ModelScope: https://modelscope.cn/organization/RoboCOIN
+  - The datasets are continuously updated; licenses and versions follow each dataset page.
+
+- **Dataset overview**:
   
   ![RoboCOIN Platforms & Tasks](assets/datasets/robocoin-platforms.png)
   
   ![RoboCOIN Distribution](assets/datasets/robocoin-stats.png)
-- `RoboCOIN` is a large-scale, multi-robot, bimanual dataset for manipulation, covering 15 robot platforms, 421 tasks across 16 scenes, and 180K demonstration trajectories.
-
-- Resources:
-  - Hugging Face: https://huggingface.co/RoboCOIN
-  - ModelScope: https://modelscope.cn/organization/RoboCOIN
-  - The datasets are continuously updated; licenses and versions follow each dataset page.
 
 ## DataManage
 
@@ -67,30 +68,34 @@ RoboCOIN visualization and management platform for online search, preview, filte
 DataCollect is a multi-robot data collection system.
 
 - **Core features**:
-- Multi-protocol streams (ROS1/ROS2, Dora, sockets)
-- Unified collection framework built on LeRobot
-- Multi-robot, multi-sensor fusion
-- Full pipeline for live capture, validation, and submission
-- Integrations with task system, annotation system, and training pipeline on the platform side
+  - Multi-protocol streams (ROS1/ROS2, Dora, sockets)
+  - Unified collection framework built on LeRobot
+  - Multi-robot, multi-sensor fusion
+  - Full pipeline for live capture, validation, and submission
+  - Integrations with task system, annotation system, and training pipeline on the platform side
 
 It bridges on-device capabilities with platform AI services.
 
 ![DataCollect Framework](assets/DataCollect/Framework.png)
 
 ## DataConvert
+**DataConvert** is a dedicated toolkit for embodied data format conversion, supporting bi-directional transforms among RLDS, HDF5, LeRobotDataset, JSONL, and LeRobot formats to meet diverse training needs.
+- **Dataset ingest**: author dataset `yaml` files (tasks, device models, scenes, actions, etc.), which are validated to produce `info` metadata for ingestion.
+- **Format conversion**: write conversion configs, align pose files and check frame counts, then run the official conversion to produce standard LeRobot datasets (including `parquet`, `mp4`, and `meta`).
+- **Tech overview**:
   ![RoboCOIN Data Conversion](assets/DataConvert/DataConvert_info.png)
-
-- Dataset ingest: author dataset `yaml` files (tasks, device models, scenes, actions, etc.), which are validated to produce `info` metadata for ingestion.
-- Format conversion: write conversion configs, align pose files and check frame counts, then run the official conversion to produce standard LeRobot datasets (including `parquet`, `mp4`, and `meta`).
 
 More updates coming soon.
 
 ## DataForge
+**DataForge** is a toolkit for embodied data filtering and hierarchical labeling, refining raw data into high-quality **CoRobot** datasets. It handles dropped frames, freezes, artifacts, noise, grayscale frames, joint info gaps, and timestamp misalignment while adding structured labels.
+- **Data pre-processing**: remove abnormal or incomplete episodes; filter static frames, frame drops, and similar issues.
+- **Post-process & validation**: fix trajectory jitter, dimensional mismatch, and missing fields; verify consistency/reproducibility via Sim Replay.
+- **Labeling & integration**: add RoboCOIN-specific three-level labels (scene, sub-task, motion) and embed them into `parquet` and `meta` to produce final CoRobot-format data.
+- **Tech overview**: 
   ![RoboCOIN Data Processing](assets/DataForge/DataForge_info.png)
-
-- Data cleaning: remove abnormal or incomplete episodes; filter static frames, dropped frames, dimensional mismatch, and missing fields.
-- Post-process & validation: fix trajectory jitter and verify consistency/reproducibility via Sim Replay.
-- Labeling & integration: add RoboCOIN-specific three-level labels (scene, sub-task, motion) and write them into `parquet` and `meta` to produce high-quality CoRobot datasets.
+- **Hierarchical annotation**:
+  ![RoboCOIN Hierarchical Annotation](assets/DataForge/Hierarchical_Annotation.png)
 
 More updates coming soon.
 
