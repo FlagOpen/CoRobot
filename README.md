@@ -1,9 +1,9 @@
 # CoRobot 1.0
 
-[![GitHub Repo stars](https://img.shields.io/github/stars/neo128/CoRobot?style=social)](https://github.com/neo128/CoRobot/stargazers)
-[![Issues](https://img.shields.io/github/issues/neo128/CoRobot)](https://github.com/neo128/CoRobot/issues)
-[![Last Commit](https://img.shields.io/github/last-commit/neo128/CoRobot)](https://github.com/neo128/CoRobot/commits)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/neo128/CoRobot/pulls)
+[![GitHub Repo stars](https://img.shields.io/github/stars/FlagOpen/CoRobot?style=social)](https://github.com/FlagOpen/CoRobot/stargazers)
+[![Issues](https://img.shields.io/github/issues/FlagOpen/CoRobot)](https://github.com/FlagOpen/CoRobot/issues)
+[![Last Commit](https://img.shields.io/github/last-commit/FlagOpen/CoRobot)](https://github.com/FlagOpen/CoRobot/commits)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/FlagOpen/CoRobot/pulls)
 [![Made with Love](https://img.shields.io/badge/Made%20with-CoRobot-orange)](#corobot-10)
 
 具身数据开源框架 CoRobot 1.0——面向具身数据采集、转化、处理、检索、预览、下载和训练的全流程开源框架。其设计遵循“协同 (Collaboration)、一致 (Coherence)、聚合 (Collective)”三大核心理念，旨在通过一体化的数据基础设施提升多本体机器人数据的标准化程度与复用效率。
@@ -39,7 +39,7 @@
 > 推荐使用 macOS 或 Linux，需预装 Git、Python (>=3.10) 与常见机器人依赖。
 
 ```bash
-git clone git@github.com:neo128/CoRobot.git
+git clone git@github.com:FlagOpen/CoRobot.git
 cd CoRobot
 git submodule update --init --recursive
 ./scripts/bootstrap.sh         # 初始化所有子模块依赖
@@ -56,7 +56,7 @@ git submodule foreach 'git status -sb'
 ## Quick Start
 1. **拉起工作区**
    ```bash
-   git clone git@github.com:neo128/CoRobot.git
+   git clone git@github.com:FlagOpen/CoRobot.git
    cd CoRobot
    ./scripts/bootstrap.sh
    git submodule update --remote --merge   # 跟踪外部提交
@@ -74,7 +74,7 @@ git submodule foreach 'git status -sb'
      python train.py --config configs/lerobot/rtml_multi.yaml --data_root <path>
      ```
 5. **发布与集成**
-   - 利用 `RoboCoin` 进行数据/模型资产化管理，实现多本体共享。
+   - 利用 `RoboCoin`（FlagOpen/robocoin-lerobot）进行数据/模型资产化管理，实现多本体共享。
 
 ## Datasets
 
@@ -130,9 +130,9 @@ git submodule foreach 'git status -sb'
      - 使用 `DataManage` 进行元数据检索、可视化与下载管理。
 
 ## Update & Maintenance
-- 子模块 URL 默认指向本机本地路径（`file:///.../corobot-modules/<name>`），便于在未创建远程仓库前进行开发与联调。若需切换到 GitHub/GitLab：
+- 子模块 URL 按 `.gitmodules` 中配置的远程，`RoboCoin` 已切换为 `FlagOpen/robocoin-lerobot`。若需切换到自定义 fork：
   ```bash
-  git submodule set-url RoboCoin <remote-url>
+  git submodule set-url RoboCoin git@github.com:FlagOpen/robocoin-lerobot.git
   git submodule set-url DataManage <remote-url>
   git submodule set-url DataTrain <remote-url>
   git submodule set-url DataCollect <remote-url>
@@ -145,14 +145,14 @@ git submodule foreach 'git status -sb'
 - 在外部目录直接开发子项目，回到主仓库执行 `git submodule update --remote --merge` 即可同步提交。
 
 ## Community
-- **Issues**：欢迎在 [GitHub Issues](https://github.com/neo128/CoRobot/issues) 反馈 bug、需求与数据协议建议。
+- **Issues**：欢迎在 [GitHub Issues](https://github.com/FlagOpen/CoRobot/issues) 反馈 bug、需求与数据协议建议。
 - **Discussions**：可在 Discussions（筹备中）进行方案交流与需求共建。
 - **Roadmap**：关注 [Projects](https://github.com/users/neo128/projects)（若无则以 Issue 标签追踪）了解迭代计划。
 
 ## Projects
 | 模块 | 角色 | 能力亮点 |
 | --- | --- | --- |
-| `RoboCoin` | 数据与模型资产管理 | 提供资产上链、检索与权限控制能力，加速数据共享。 |
+| `RoboCoin` (`robocoin-lerobot`) | 数据与模型资产管理 | 提供资产上链、检索与权限控制能力，加速数据共享。 |
 | `DataManage` | 数据治理 | 集成元数据检索、预览、下载、审计等工具。 |
 | `DataTrain` | 模型训练 | 支持基于 LeRobot/RTML 的模仿学习、策略学习与多模态训练范式。 |
 | `DataCollect` | 数据采集 | 面向多机器人平台的采集工具链，支持实时监控与故障回溯。 |
@@ -164,7 +164,7 @@ git submodule foreach 'git status -sb'
 | --- | --- | --- | --- |
 | LeRobot-RTML 多本体模仿学习 | `DataCollect` + `DataConvert` + `DataTrain` | 以 RTML 描述轨迹，结合 LeRobot 训练策略克隆模型。 | ✅ 可用 |
 | 规则 + LLM 层次化标注模型 | `DataForge` | 结合规则校验与 LLM 审核，生成轨迹级/帧级标签。 | 🔄 迭代中 |
-| RoboCoin 多模态检索模型 | `DataManage` + `RoboCoin` | 基于元数据与嵌入构建的检索/推荐模型，支持多模态查询。 | 🚧 规划中 |
+| RoboCoin 多模态检索模型 | `DataManage` + `RoboCoin` (`robocoin-lerobot`) | 基于元数据与嵌入构建的检索/推荐模型，支持多模态查询。 | 🚧 规划中 |
 
 ## Contributor
 感谢所有贡献者与多本体机器人伙伴！欢迎通过 PR、Issue 或社区讨论参与共建：
@@ -176,9 +176,9 @@ git submodule foreach 'git status -sb'
 @misc{corobot2024,
   title        = {CoRobot 1.0: An Open Embodied Data Infrastructure for Multi-Robot Collaboration},
   author       = {CoRobot Team},
-  year         = {2024},
+  year         = {2025},
   publisher    = {FlagOpen},
-  howpublished = {\url{https://github.com/neo128/CoRobot}}
+  howpublished = {\url{https://github.com/FlagOpen/CoRobot}}
 }
 ```
 

@@ -1,6 +1,6 @@
 [submodule "RoboCoin"]
 	path = RoboCoin
-	url = git@github.com:neo128/RoboCoin.git
+	url = git@github.com:FlagOpen/robocoin-lerobot.git
 [submodule "DataManage"]
 	path = DataManage
 	url = git@github.com:neo128/DataManage.git
