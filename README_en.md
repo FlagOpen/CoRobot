@@ -17,12 +17,12 @@ CoRobot 1.0 is an open embodied-data framework for end-to-end data collection, c
 ## Repository Modules
 | Module | Role | Highlights |
 | --- | --- | --- |
-| `RoboCOIN` (`robocoin-lerobot`) | Data & model asset management | Multi-robot bimanual dataset: 16 robot bodies, 200k+ trajectories, 10+ scenes, 1,000+ tasks, 50+ skills, 500+ objects. |
-| `DataManage` | Data governance | Visual search: keyword search, visualization, helps targeted downloads. |
-| `DataTrain` | Model training | Unified training tools: quick integration/training for embodied models like OpenPI, RDT, DP. |
-| `DataCollect` | Data collection | Multi-robot collection tools: supports various robot bodies and teleoperation; integrated with vendors like RMY, SLAMTEC, Galactic, Unitree, Leju, Xinhaitu, Lingyu, ZhiYuan, etc. |
-| `DataConvert` | Data conversion | Conversion toolkit: bi-directional transforms among RLDS, HDF5, JSONL, and LeRobotDataset. |
-| `DataForge` | Data processing | Processing toolkit: defect filtering (static frames, frame drops, dimensional mismatch, missing fields, jitter) and enrichment labels (scene, sub-task, motion description). |
+| [`RoboCOIN`](https://github.com/FlagOpen/robocoin-lerobot) | Data & model asset management | Multi-robot bimanual dataset: 16 robot bodies, 200k+ trajectories, 10+ scenes, 1,000+ tasks, 50+ skills, 500+ objects. |
+| [`DataManage`](https://github.com/FlagOpen/DataManage) | Data governance | Visual search: keyword search, visualization, helps targeted downloads. |
+| [`DataTrain`](https://github.com/FlagOpen/DataTrain) | Model training | Unified training tools: quick integration/training for embodied models like OpenPI, RDT, DP. |
+| [`DataCollect`](https://github.com/FlagOpen/DataCollect) | Data collection | Multi-robot collection tools: supports various robot bodies and teleoperation; integrated with vendors like RMY, SLAMTEC, Galactic, Unitree, Leju, Xinhaitu, Lingyu, ZhiYuan, etc. |
+| [`DataConvert`](https://github.com/FlagOpen/DataConvert) | Data conversion | Conversion toolkit: bi-directional transforms among RLDS, HDF5, JSONL, and LeRobotDataset. |
+| [`DataForge`](https://github.com/FlagOpen/DataForge) | Data processing | Processing toolkit: defect filtering (static frames, frame drops, dimensional mismatch, missing fields, jitter) and enrichment labels (scene, sub-task, motion description). |
 
 ## RoboCOIN
 
