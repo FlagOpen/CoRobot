@@ -66,7 +66,7 @@
 
 ## DataCollect
 
-DataCollect 是一套面向多本体的数据采集系统。
+DataCollect 是一套面向多本体的数据采集系统。本仓库将于12月初开源。
 
 - **核心功能**：
 - 多协议数据流接入（ROS1/ROS2、Dora、Sockets）
