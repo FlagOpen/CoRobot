@@ -66,7 +66,7 @@
 
 ## DataCollect
 
-DataCollect 是一套面向多本体的数据采集系统。本仓库将于12月初开源。
+DataCollect 是一套面向多本体的数据采集系统。本仓库将于2025年12月开源。
 
 - **核心功能**：
 - 多协议数据流接入（ROS1/ROS2、Dora、Sockets）
@@ -114,11 +114,11 @@ DataCollect 是一套面向多本体的数据采集系统。本仓库将于12月
 ## Contributor
 感谢所有贡献者与多本体机器人伙伴！欢迎通过 PR、Issue 或社区讨论参与共建：
 - FlagOpen / CoRobot Team
-- 社区志愿者（期待在 `CONTRIBUTORS.md` 中见到你的名字）
+- 社区志愿者
 
 ## Citation
 ```bibtex
-@misc{corobot2024,
+@misc{corobot2025,
   title        = {CoRobot 1.0: An Open Embodied Data Infrastructure for Multi-Robot Collaboration},
   author       = {CoRobot Team},
   year         = {2025},
