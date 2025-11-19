@@ -18,7 +18,7 @@
 ## 仓库模块
 | 模块 | 角色 | 能力亮点 |
 | --- | --- | --- |
-| [`RoboCOIN`](https://github.com/FlagOpen/robocoin-lerobot) | 数据与模型资产管理 | 多本体双臂操作数据集，16 款本体、20 万+ 轨迹、10+ 场景、1000+ 任务、50+ 技能、500+ 物体。 |
+| [`RoboCOIN`](https://github.com/FlagOpen/RoboCoin) | 数据与模型资产管理 | 多本体双臂操作数据集，16 款本体、20 万+ 轨迹、10+ 场景、1000+ 任务、50+ 技能、500+ 物体。 |
 | [`DataManage`](https://github.com/FlagOpen/DataManage) | 数据治理 | 数据可视化检索：关键词检索、可视化展示，便于查询与针对性下载。 |
 | [`DataTrain`](https://github.com/FlagOpen/DataTrain) | 模型训练 | 统一训练工具：支持 OpenPI、RDT、DP 等具身模型的快速接入与训练。 |
 | [`DataCollect`](https://github.com/FlagOpen/DataCollect) | 数据采集 | 多本体数采工具：支持多种本体与遥操作，已接入睿尔曼、松灵、银河通用、宇树、乐聚、星海图、灵御、智元等。 |
@@ -29,7 +29,7 @@
 **RoboCOIN**是一个面向双臂操作研究的、大规模多本体的高质量数据集，涵盖 `15` 种不同的机器人平台，在 `421` 个任务与 `16` 个场景下提供 `180K` 条示范轨迹。
 
 - **资源地址**：
-  - 主页地址：https://flagopen.github.io/RoboCOIN_Homepage/
+  - 主页地址：https://flagopen.github.io/RoboCOIN/
   - Hugging Face：https://huggingface.co/RoboCOIN/datasets
   - ModelScope：https://modelscope.cn/organization/RoboCOIN
   - 数据集持续更新，具体许可与版本以各数据集页面为准。
