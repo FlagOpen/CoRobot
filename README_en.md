@@ -12,7 +12,7 @@ CoRobot 1.0 is an open embodied-data framework for end-to-end data collection, c
 
 ![RoboCOIN Tech Stack](assets/corobot/process.png)
 
-![CoRobot 1.0 Overview](assets/corobot/CoRobot%20Intro.png)
+![CoRobot 1.0 Overview](assets/corobot/CoRobot%20Intro_English.png)
 
 ## Repository Modules
 | Module | Role | Highlights |
