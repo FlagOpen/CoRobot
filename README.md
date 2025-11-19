@@ -29,6 +29,7 @@
 **RoboCOIN**是一个面向双臂操作研究的、大规模多本体的高质量数据集，涵盖 `15` 种不同的机器人平台，在 `421` 个任务与 `16` 个场景下提供 `180K` 条示范轨迹。
 
 - **资源地址**：
+  - 主页地址：https://flagopen.github.io/RoboCOIN_Homepage/
   - Hugging Face：https://huggingface.co/RoboCOIN
   - ModelScope：https://modelscope.cn/organization/RoboCOIN
   - 数据集持续更新，具体许可与版本以各数据集页面为准。
