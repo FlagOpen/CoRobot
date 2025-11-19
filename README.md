@@ -62,6 +62,8 @@
   
   ![DataManage 下载命令生成](assets/DataManage/DownloadCLI.png)
 
+  ![DataManage 使用示例](assets/DataManage/how-to-use.gif)
+
 ## DataTrain
 
 ## DataCollect
