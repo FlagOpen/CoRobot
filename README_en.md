@@ -108,7 +108,6 @@ More updates coming soon.
 ## Community
 - **Issues**: Please report bugs, feature requests, or data protocol suggestions in [GitHub Issues](https://github.com/FlagOpen/CoRobot/issues).
 - **Discussions**: Coming soon for solution sharing and co-building.
-- **Roadmap**: Follow [Projects](https://github.com/users/neo128/projects) (or Issue labels) for iteration plans.
 
 ## Contributor
 Thanks to all contributors and multi-robot partners! Join via PRs, Issues, or community discussions:
