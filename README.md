@@ -62,7 +62,7 @@
   
   ![DataManage 下载命令生成](assets/DataManage/DownloadCLI.png)
 
-  ![DataManage 使用示例](assets/DataManage/how-to-use.gif)
+  <img src="assets/DataManage/how-to-use.gif" alt="DataManage 使用示例" width="800">
 
 ## DataTrain
 

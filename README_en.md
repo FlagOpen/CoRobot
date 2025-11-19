@@ -90,7 +90,7 @@ It bridges on-device capabilities with platform AI services.
 - **Dataset ingest**: author dataset `yaml` files (tasks, device models, scenes, actions, etc.), which are validated to produce `info` metadata for ingestion.
 - **Format conversion**: write conversion configs, align pose files and check frame counts, then run the official conversion to produce standard LeRobot datasets (including `parquet`, `mp4`, and `meta`).
 - **Tech overview**:
-  ![RoboCOIN Data Conversion](assets/DataConvert/DataConvert_info.png)
+  ![RoboCOIN Data Conversion](assets/DataConvert/DataConvert_info_English.png)
 
 More updates coming soon.
 
@@ -100,7 +100,7 @@ More updates coming soon.
 - **Post-process & validation**: fix trajectory jitter, dimensional mismatch, and missing fields; verify consistency/reproducibility via Sim Replay.
 - **Labeling & integration**: add RoboCOIN-specific three-level labels (scene, sub-task, motion) and embed them into `parquet` and `meta` to produce final CoRobot-format data.
 - **Tech overview**: 
-  ![RoboCOIN Data Processing](assets/DataForge/DataForge_info.png)
+  ![RoboCOIN Data Processing](assets/DataForge/DataForge_info_English.png)
 - **Hierarchical annotation**:
   ![RoboCOIN Hierarchical Annotation](assets/DataForge/Hierarchical_Annotation.png)
 
