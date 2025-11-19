@@ -65,7 +65,7 @@ RoboCOIN visualization and management platform for online search, preview, filte
 
 ## DataCollect
 
-DataCollect is a multi-robot data collection system.
+DataCollect is a multi-robot data collection system. This repository will be open-sourced in Dec 2025.
 
 - **Core features**:
   - Multi-protocol streams (ROS1/ROS2, Dora, sockets)
@@ -76,7 +76,13 @@ DataCollect is a multi-robot data collection system.
 
 It bridges on-device capabilities with platform AI services.
 
-![DataCollect Framework](assets/DataCollect/Framework.png)
+- **System diagram**:
+
+![DataCollect Framework](assets/DataCollect/Framework_EN.png)
+
+- **Data collection UI**:
+
+![DataCollect UI](assets/DataCollect/Collect_View.png)
 
 ## DataConvert
 **DataConvert** is a dedicated toolkit for embodied data format conversion, supporting bi-directional transforms among RLDS, HDF5, LeRobotDataset, JSONL, and LeRobot formats to meet diverse training needs.
@@ -107,11 +113,11 @@ More updates coming soon.
 ## Contributor
 Thanks to all contributors and multi-robot partners! Join via PRs, Issues, or community discussions:
 - FlagOpen / CoRobot Team
-- Community volunteers (hope to see your name in `CONTRIBUTORS.md`)
+- Community volunteers
 
 ## Citation
 ```bibtex
-@misc{corobot2024,
+@misc{corobot2025,
   title        = {CoRobot 1.0: An Open Embodied Data Infrastructure for Multi-Robot Collaboration},
   author       = {CoRobot Team},
   year         = {2025},
