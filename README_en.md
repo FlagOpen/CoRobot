@@ -18,7 +18,7 @@ CoRobot 1.0 is an open embodied-data framework for end-to-end data collection, c
 | Module | Role | Highlights |
 | --- | --- | --- |
 | [`RoboCOIN`](https://github.com/FlagOpen/RoboCoin) | Data & model asset management | Multi-robot bimanual dataset: 16 robot bodies, 200k+ trajectories, 10+ scenes, 1,000+ tasks, 50+ skills, 500+ objects. |
-| [`DataManage`](https://github.com/FlagOpen/DataManage) | Data governance | Visual search: keyword search, visualization, helps targeted downloads. |
+| [`RoboCOIN-DataManage`](https://github.com/FlagOpen/RoboCOIN-DataManage) | Data governance | Visual search: keyword search, visualization, helps targeted downloads. |
 | [`DataTrain`](https://github.com/FlagOpen/DataTrain) | Model training | Unified training tools: quick integration/training for embodied models like OpenPI, RDT, DP. |
 | [`DataCollect`](https://github.com/FlagOpen/DataCollect) | Data collection | Multi-robot collection tools: supports various robot bodies and teleoperation; integrated with vendors like RMY, SLAMTEC, Galactic, Unitree, Leju, Xinhaitu, Lingyu, ZhiYuan, etc. |
 | [`DataConvert`](https://github.com/FlagOpen/DataConvert) | Data conversion | Conversion toolkit: bi-directional transforms among RLDS, HDF5, JSONL, and LeRobotDataset. |
@@ -40,11 +40,11 @@ CoRobot 1.0 is an open embodied-data framework for end-to-end data collection, c
   
   ![RoboCOIN Distribution](assets/datasets/robocoin-stats.png)
 
-## DataManage
+## RoboCOIN-DataManage
 
-RoboCOIN visualization and management platform for online search, preview, filtering, and download.
+RoboCOIN-DataManage is the visualization and management platform for RoboCOIN, enabling online search, preview, filtering, and download.
 
-- **Online**: [https://flagopen.github.io/DataManage/](https://flagopen.github.io/DataManage/)
+- **Online**: [https://flagopen.github.io/RoboCOIN-DataManage/](https://flagopen.github.io/RoboCOIN-DataManage/)
 
 - **Key features**:
   - **Multi-dimensional filtering**: filter by scene, robot, end-effector, action, object, etc.

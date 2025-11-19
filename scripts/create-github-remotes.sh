@@ -42,7 +42,7 @@ else
   OWNER=$(gh api user --jq '.login')
 fi
 
-REPOS=(CoRobot RoboCOIN DataManage DataTrain DataCollect DataConvert DataForge)
+REPOS=(CoRobot RoboCOIN RoboCOIN-DataManage DataTrain DataCollect DataConvert DataForge)
 
 create_repo(){
   local name="$1"
@@ -81,7 +81,7 @@ done
 set_remote_and_push CoRobot "."
 
 # Submodules remotes + .gitmodules URLs
-for name in RoboCOIN DataManage DataTrain DataCollect DataConvert DataForge; do
+for name in RoboCOIN RoboCOIN-DataManage DataTrain DataCollect DataConvert DataForge; do
   set_remote_and_push "$name" "$name"
   git submodule set-url "$name" "git@github.com:$OWNER/$name.git"
   if [ -d "$name/.git" ]; then
