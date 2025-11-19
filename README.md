@@ -30,7 +30,7 @@
 
 - **资源地址**：
   - 主页地址：https://flagopen.github.io/RoboCOIN_Homepage/
-  - Hugging Face：https://huggingface.co/RoboCOIN
+  - Hugging Face：https://huggingface.co/RoboCOIN/datasets
   - ModelScope：https://modelscope.cn/organization/RoboCOIN
   - 数据集持续更新，具体许可与版本以各数据集页面为准。
 
