@@ -1,18 +1,18 @@
 [submodule "RoboCOIN"]
 	path = RoboCOIN
-	url = git@github.com:FlagOpen/robocoin-lerobot.git
+	url = https://github.com/FlagOpen/robocoin-lerobot.git
 [submodule "DataManage"]
 	path = DataManage
-	url = git@github.com:FlagOpen/DataManage.git
+	url = https://github.com/FlagOpen/DataManage.git
 [submodule "DataTrain"]
 	path = DataTrain
-	url = git@github.com:FlagOpen/DataTrain.git
+	url = https://github.com/FlagOpen/DataTrain.git
 [submodule "DataCollect"]
 	path = DataCollect
-	url = git@github.com:FlagOpen/DataCollect.git
+	url = https://github.com/FlagOpen/DataCollect.git
 [submodule "DataConvert"]
 	path = DataConvert
-	url = git@github.com:FlagOpen/DataConvert.git
+	url = https://github.com/FlagOpen/DataConvert.git
 [submodule "DataForge"]
 	path = DataForge
-	url = git@github.com:FlagOpen/DataForge.git
+	url = https://github.com/FlagOpen/DataForge.git
