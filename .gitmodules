@@ -5,15 +5,3 @@
 [submodule "DataManage"]
 	path = DataManage
 	url = https://github.com/FlagOpen/RoboCOIN-DataManage.git
-[submodule "DataTrain"]
-	path = DataTrain
-	url = https://github.com/FlagOpen/DataTrain.git
-[submodule "DataCollect"]
-	path = DataCollect
-	url = https://github.com/FlagOpen/DataCollect.git
-[submodule "DataConvert"]
-	path = DataConvert
-	url = https://github.com/FlagOpen/DataConvert.git
-[submodule "DataForge"]
-	path = DataForge
-	url = https://github.com/FlagOpen/DataForge.git

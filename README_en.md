@@ -15,14 +15,14 @@ CoRobot 1.0 is an open embodied-data framework for end-to-end data collection, c
 ![CoRobot 1.0 Overview](assets/corobot/CoRobot%20Intro_English.png)
 
 ## Repository Modules
-| Module | Role | Highlights |
-| --- | --- | --- |
-| [`RoboCOIN`](https://github.com/FlagOpen/RoboCoin) | Data & model asset management | Multi-robot bimanual dataset: 16 robot bodies, 200k+ trajectories, 10+ scenes, 1,000+ tasks, 50+ skills, 500+ objects. |
-| [`RoboCOIN-DataManage`](https://github.com/FlagOpen/RoboCOIN-DataManage) | Data governance | Visual search: keyword search, visualization, helps targeted downloads. |
-| [`DataTrain`](https://github.com/FlagOpen/DataTrain) | Model training | Unified training tools: quick integration/training for embodied models like OpenPI, RDT, DP. |
-| [`DataCollect`](https://github.com/FlagOpen/DataCollect) | Data collection | Multi-robot collection tools: supports various robot bodies and teleoperation; integrated with vendors like RMY, SLAMTEC, Galactic, Unitree, Leju, Xinhaitu, Lingyu, ZhiYuan, etc. |
-| [`DataConvert`](https://github.com/FlagOpen/DataConvert) | Data conversion | Conversion toolkit: bi-directional transforms among RLDS, HDF5, JSONL, and LeRobotDataset. |
-| [`DataForge`](https://github.com/FlagOpen/DataForge) | Data processing | Processing toolkit: defect filtering (static frames, frame drops, dimensional mismatch, missing fields, jitter) and enrichment labels (scene, sub-task, motion description). |
+| Module | Role | Highlights | Status |
+| --- | --- | --- | --- |
+| [`RoboCOIN`](https://github.com/FlagOpen/RoboCoin) | Data & model asset management | Multi-robot bimanual dataset: 16 robot bodies, 200k+ trajectories, 10+ scenes, 1,000+ tasks, 50+ skills, 500+ objects. | Open-sourced |
+| [`RoboCOIN-DataManage`](https://github.com/FlagOpen/RoboCOIN-DataManage) | Data governance | Visual search: keyword search, visualization, helps targeted downloads. | Open-sourced |
+| DataTrain | Model training | Unified training tools: quick integration/training for embodied models like OpenPI, RDT, DP. | Coming soon |
+| DataCollect | Data collection | Multi-robot collection tools: supports various robot bodies and teleoperation; integrated with vendors like RMY, SLAMTEC, Galactic, Unitree, Leju, Xinhaitu, Lingyu, ZhiYuan, etc. | Coming soon |
+| DataConvert | Data conversion | Conversion toolkit: bi-directional transforms among RLDS, HDF5, JSONL, and LeRobotDataset. | Coming soon |
+| DataForge | Data processing | Processing toolkit: defect filtering (static frames, frame drops, dimensional mismatch, missing fields, jitter) and enrichment labels (scene, sub-task, motion description). | Coming soon |
 
 ## RoboCOIN
 
