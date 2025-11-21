@@ -1,7 +1,8 @@
 [submodule "RoboCOIN"]
 	path = RoboCOIN
 	url = https://github.com/FlagOpen/RoboCoin.git
-	branch = gh-pages
+	branch = main
 [submodule "DataManage"]
 	path = DataManage
 	url = https://github.com/FlagOpen/RoboCOIN-DataManage.git
+	branch = main
