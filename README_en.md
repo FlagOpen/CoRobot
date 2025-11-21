@@ -62,7 +62,6 @@ RoboCOIN-DataManage is the visualization and management platform for RoboCOIN, e
   
   ![DataManage Download CLI](assets/DataManage/DownloadCLI.png)
   <img src="assets/DataManage/how-to-use.gif" alt="DataManage 使用示例" width="800">
-## DataTrain
 
 ## DataCollect
 
