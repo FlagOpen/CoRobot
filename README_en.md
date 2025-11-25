@@ -44,7 +44,7 @@ CoRobot 1.0 is an open embodied-data framework for end-to-end data collection, c
 
 RoboCOIN-DataManage is the visualization and management platform for RoboCOIN, enabling online search, preview, filtering, and download.
 
-- **Online**: [https://flagopen.github.io/RoboCOIN-DataManage/](https://flagopen.github.io/RoboCOIN-DataManage/)
+- **Online**: [https://flagopen.github.io/RoboCOIN-DataManager/](https://flagopen.github.io/RoboCOIN-DataManager/)
 
 - **Key features**:
   - **Multi-dimensional filtering**: filter by scene, robot, end-effector, action, object, etc.

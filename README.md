@@ -44,7 +44,7 @@
 
 **RoboCOIN-DataManage** 是 RoboCOIN 数据集的可视化与管理平台，提供数据集在线检索、预览、筛选、下载的一站式解决方案。
 
-- **在线访问**：[https://flagopen.github.io/RoboCOIN-DataManage/](https://flagopen.github.io/RoboCOIN-DataManage/)
+- **在线访问**：[https://flagopen.github.io/RoboCOIN-DataManager/](https://flagopen.github.io/RoboCOIN-DataManager/)
 
 - **核心功能**：
   - **多维度筛选**：支持按场景、机器人、末端执行器、动作、操作对象等维度过滤数据集
