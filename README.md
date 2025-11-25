@@ -19,7 +19,7 @@
 | 模块 | 角色 | 能力亮点 | 状态 |
 | --- | --- | --- | --- |
 | [`RoboCOIN`](https://github.com/FlagOpen/RoboCoin) | 数据与模型资产管理 | 多本体双臂操作数据集，16 款本体、20 万+ 轨迹、10+ 场景、1000+ 任务、50+ 技能、500+ 物体。 | 已开源 |
-| [`RoboCOIN-DataManage`](https://github.com/FlagOpen/RoboCOIN-DataManage) | 数据治理 | 数据可视化检索：关键词检索、可视化展示，便于查询与针对性下载。 | 已开源 |
+| [`RoboCOIN-DataManager`](https://github.com/FlagOpen/RoboCOIN-DataManager) | 数据治理 | 数据可视化检索：关键词检索、可视化展示，便于查询与针对性下载。 | 已开源 |
 | DataTrain | 模型训练 | 统一训练工具：支持 OpenPI、RDT、DP 等具身模型的快速接入与训练。 | 暂未开源，敬请期待 |
 | DataCollect | 数据采集 | 多本体数采工具：支持多种本体与遥操作，已接入睿尔曼、松灵、银河通用、宇树、乐聚、星海图、灵御、智元等。 | 暂未开源，敬请期待 |
 | DataConvert | 数据转化 | 数据格式转化工具：支持 RLDS、HDF5、JSONL 与 LeRobotDataset 的双向转换。 | 暂未开源，敬请期待 |
@@ -40,9 +40,9 @@
   
   ![RoboCOIN 分布统计](assets/datasets/robocoin-stats.png)
 
-## RoboCOIN-DataManage
+## RoboCOIN-DataManager
 
-**RoboCOIN-DataManage** 是 RoboCOIN 数据集的可视化与管理平台，提供数据集在线检索、预览、筛选、下载的一站式解决方案。
+**RoboCOIN-DataManager** 是 RoboCOIN 数据集的可视化与管理平台，提供数据集在线检索、预览、筛选、下载的一站式解决方案。
 
 - **在线访问**：[https://flagopen.github.io/RoboCOIN-DataManager/](https://flagopen.github.io/RoboCOIN-DataManager/)
 
@@ -56,13 +56,13 @@
 
 - **界面展示**：
   
-  ![DataManage 主界面](assets/DataManage/Overview.png)
+  ![DataManager 主界面](assets/DataManager/Overview.png)
   
-  ![DataManage 筛选与预览](assets/DataManage/Filter.png)
+  ![DataManager 筛选与预览](assets/DataManager/Filter.png)
   
-  ![DataManage 下载命令生成](assets/DataManage/DownloadCLI.png)
+  ![DataManager 下载命令生成](assets/DataManager/DownloadCLI.png)
 
-  <img src="assets/DataManage/how-to-use.gif" alt="DataManage 使用示例" width="800">
+  <img src="assets/DataManager/how-to-use.gif" alt="DataManager 使用示例" width="800">
 
 
 
