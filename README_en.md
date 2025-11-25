@@ -18,7 +18,7 @@ CoRobot 1.0 is an open embodied-data framework for end-to-end data collection, c
 | Module | Role | Highlights | Status |
 | --- | --- | --- | --- |
 | [`RoboCOIN`](https://github.com/FlagOpen/RoboCoin) | Data & model asset management | Multi-robot bimanual dataset: 16 robot bodies, 200k+ trajectories, 10+ scenes, 1,000+ tasks, 50+ skills, 500+ objects. | Open-sourced |
-| [`RoboCOIN-DataManage`](https://github.com/FlagOpen/RoboCOIN-DataManage) | Data governance | Visual search: keyword search, visualization, helps targeted downloads. | Open-sourced |
+| [`RoboCOIN-DataManager`](https://github.com/FlagOpen/RoboCOIN-DataManager) | Data governance | Visual search: keyword search, visualization, helps targeted downloads. | Open-sourced |
 | DataTrain | Model training | Unified training tools: quick integration/training for embodied models like OpenPI, RDT, DP. | Coming soon |
 | DataCollect | Data collection | Multi-robot collection tools: supports various robot bodies and teleoperation; integrated with vendors like RMY, SLAMTEC, Galactic, Unitree, Leju, Xinhaitu, Lingyu, ZhiYuan, etc. | Coming soon |
 | DataConvert | Data conversion | Conversion toolkit: bi-directional transforms among RLDS, HDF5, JSONL, and LeRobotDataset. | Coming soon |
@@ -40,11 +40,11 @@ CoRobot 1.0 is an open embodied-data framework for end-to-end data collection, c
   
   ![RoboCOIN Distribution](assets/datasets/robocoin-stats.png)
 
-## RoboCOIN-DataManage
+## RoboCOIN-DataManager
 
-RoboCOIN-DataManage is the visualization and management platform for RoboCOIN, enabling online search, preview, filtering, and download.
+RoboCOIN-DataManager is the visualization and management platform for RoboCOIN, enabling online search, preview, filtering, and download.
 
-- **Online**: [https://flagopen.github.io/RoboCOIN-DataManage/](https://flagopen.github.io/RoboCOIN-DataManage/)
+- **Online**: [https://flagopen.github.io/RoboCOIN-DataManager/](https://flagopen.github.io/RoboCOIN-DataManager/)
 
 - **Key features**:
   - **Multi-dimensional filtering**: filter by scene, robot, end-effector, action, object, etc.
@@ -56,12 +56,12 @@ RoboCOIN-DataManage is the visualization and management platform for RoboCOIN, e
 
 - **UI preview**:
   
-  ![DataManage Overview](assets/DataManage/Overview.png)
+  ![DataManager Overview](assets/DataManager/Overview.png)
   
-  ![DataManage Filter & Preview](assets/DataManage/Filter.png)
+  ![DataManager Filter & Preview](assets/DataManager/Filter.png)
   
-  ![DataManage Download CLI](assets/DataManage/DownloadCLI.png)
-  <img src="assets/DataManage/how-to-use.gif" alt="DataManage 使用示例" width="800">
+  ![DataManager Download CLI](assets/DataManager/DownloadCLI.png)
+  <img src="assets/DataManager/how-to-use.gif" alt="DataManager 使用示例" width="800">
 
 ## DataCollect
 
