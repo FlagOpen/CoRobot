@@ -6,116 +6,113 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/FlagOpen/CoRobot/pulls)
 [![Made with Love](https://img.shields.io/badge/Made%20with-CoRobot-orange)](#corobot-10)
 
-[English](README_en.md) | [中文](README.md)
+[English](README.md) | [中文](README_cn.md)
 
-具身数据开源框架 CoRobot 1.0——面向具身数据采集、转化、处理、检索、预览、下载和训练的全流程开源框架。其设计遵循“协同 (Collaboration)、一致 (Coherence)、聚合 (Collective)”三大核心理念，旨在通过一体化的数据基础设施提升多本体机器人数据的标准化程度与复用效率。
-  ![RoboCOIN 技术路线](assets/corobot/process.png)
+CoRobot 1.0 is an open embodied-data framework for end-to-end data collection, conversion, processing, retrieval, preview, download, and training. It follows three core principles—Collaboration, Coherence, and Collective—to improve standardization and reuse efficiency for multi-robot datasets through unified data infrastructure.
 
-![具身数据开源框架 CoRobot 1.0](assets/corobot/CoRobot%20Intro.png)
+![RoboCOIN Tech Stack](assets/corobot/process.png)
 
+![CoRobot 1.0 Overview](assets/corobot/CoRobot%20Intro_English.png)
 
-
-## 仓库模块
-| 模块 | 角色 | 能力亮点 | 状态 |
+## Repository Modules
+| Module | Role | Highlights | Status |
 | --- | --- | --- | --- |
-| [`RoboCOIN`](https://github.com/FlagOpen/RoboCoin) | 数据与模型资产管理 | 多本体双臂操作数据集，16 款本体、20 万+ 轨迹、10+ 场景、1000+ 任务、50+ 技能、500+ 物体。 | 已开源 |
-| [`RoboCOIN-DataManager`](https://github.com/FlagOpen/RoboCOIN-DataManager) | 数据治理 | 数据可视化检索：关键词检索、可视化展示，便于查询与针对性下载。 | 已开源 |
-| DataTrain | 模型训练 | 统一训练工具：支持 OpenPI、RDT、DP 等具身模型的快速接入与训练。 | 暂未开源，敬请期待 |
-| DataCollect | 数据采集 | 多本体数采工具：支持多种本体与遥操作，已接入睿尔曼、松灵、银河通用、宇树、乐聚、星海图、灵御、智元等。 | 暂未开源，敬请期待 |
-| DataConvert | 数据转化 | 数据格式转化工具：支持 RLDS、HDF5、JSONL 与 LeRobotDataset 的双向转换。 | 暂未开源，敬请期待 |
-| DataForge | 数据处理 | 数据处理工具：缺陷过滤（静止帧、跳帧、维度错位、字段缺失、轨迹抖动）与补充标注（场景、子任务、运动描述）。 | 暂未开源，敬请期待 |
+| [`RoboCOIN`](https://github.com/FlagOpen/RoboCoin) | Data & model asset management | Multi-robot bimanual dataset: 16 robot bodies, 200k+ trajectories, 10+ scenes, 1,000+ tasks, 50+ skills, 500+ objects. | Open-sourced |
+| [`RoboCOIN-DataManager`](https://github.com/FlagOpen/RoboCOIN-DataManager) | Data governance | Visual search: keyword search, visualization, helps targeted downloads. | Open-sourced |
+| DataTrain | Model training | Unified training tools: quick integration/training for embodied models like OpenPI, RDT, DP. | Coming soon |
+| DataCollect | Data collection | Multi-robot collection tools: supports various robot bodies and teleoperation; integrated with vendors like RMY, SLAMTEC, Galactic, Unitree, Leju, Xinhaitu, Lingyu, ZhiYuan, etc. | Coming soon |
+| DataConvert | Data conversion | Conversion toolkit: bi-directional transforms among RLDS, HDF5, JSONL, and LeRobotDataset. | Coming soon |
+| DataForge | Data processing | Processing toolkit: defect filtering (static frames, frame drops, dimensional mismatch, missing fields, jitter) and enrichment labels (scene, sub-task, motion description). | Coming soon |
 
 ## RoboCOIN
-**RoboCOIN**是一个面向双臂操作研究的、大规模多本体的高质量数据集，涵盖 `15` 种不同的机器人平台，在 `421` 个任务与 `16` 个场景下提供 `180K` 条示范轨迹。
 
-- **资源地址**：
-  - 主页地址：https://flagopen.github.io/RoboCOIN/
-  - Hugging Face：https://huggingface.co/RoboCOIN/datasets
-  - ModelScope：https://modelscope.cn/organization/RoboCOIN
-  - 数据集持续更新，具体许可与版本以各数据集页面为准。
+**RoboCOIN** is a large-scale, multi-robot, bimanual dataset for manipulation, covering 15 robot platforms, 421 tasks across 16 scenes, and 180K demonstration trajectories.
 
-- **数据集概览**：
+- **Resources**:
+  - Homepage: https://flagopen.github.io/RoboCOIN/
+  - Hugging Face: https://huggingface.co/RoboCOIN
+  - ModelScope: https://modelscope.cn/organization/RoboCOIN
+  - The datasets are continuously updated; licenses and versions follow each dataset page.
+
+- **Dataset overview**:
   
-  ![RoboCOIN 平台与任务概览](assets/datasets/robocoin-platforms.png)
+  ![RoboCOIN Platforms & Tasks](assets/datasets/robocoin-platforms.png)
   
-  ![RoboCOIN 分布统计](assets/datasets/robocoin-stats.png)
+  ![RoboCOIN Distribution](assets/datasets/robocoin-stats.png)
 
 ## RoboCOIN-DataManager
 
-**RoboCOIN-DataManager** 是 RoboCOIN 数据集的可视化与管理平台，提供数据集在线检索、预览、筛选、下载的一站式解决方案。
+RoboCOIN-DataManager is the visualization and management platform for RoboCOIN, enabling online search, preview, filtering, and download.
 
-- **在线访问**：[https://flagopen.github.io/RoboCOIN-DataManager/](https://flagopen.github.io/RoboCOIN-DataManager/)
+- **Online**: [https://flagopen.github.io/RoboCOIN-DataManager/](https://flagopen.github.io/RoboCOIN-DataManager/)
 
-- **核心功能**：
-  - **多维度筛选**：支持按场景、机器人、末端执行器、动作、操作对象等维度过滤数据集
-  - **实时预览**：数据集的视频自动播放与详情查看，支持悬浮信息层
-  - **智能搜索**：关键词搜索与 Filter Finder 快速定位目标数据集
-  - **购物车管理**：批量选择、添加、删除数据集，支持选择状态保持
-  - **一键下载**：生成 ModelScope/HuggingFace 下载命令，支持 Python 脚本导出
-  - **选择导入/导出**：JSON 格式保存与恢复筛选结果，便于团队协作
+- **Key features**:
+  - **Multi-dimensional filtering**: filter by scene, robot, end-effector, action, object, etc.
+  - **Instant preview**: auto-playing videos and detailed info with hover overlays
+  - **Intelligent search**: keyword search and Filter Finder for quick targeting
+  - **Cart management**: batch select/add/remove datasets with persisted selections
+  - **One-click download**: generate ModelScope/HuggingFace download commands; export Python scripts
+  - **Selection import/export**: save and restore filters in JSON for team collaboration
 
-- **界面展示**：
+- **UI preview**:
   
-  ![DataManager 主界面](assets/DataManager/Overview.png)
+  ![DataManager Overview](assets/DataManager/Overview.png)
   
-  ![DataManager 筛选与预览](assets/DataManager/Filter.png)
+  ![DataManager Filter & Preview](assets/DataManager/Filter.png)
   
-  ![DataManager 下载命令生成](assets/DataManager/DownloadCLI.png)
-
+  ![DataManager Download CLI](assets/DataManager/DownloadCLI.png)
   <img src="assets/DataManager/how-to-use.gif" alt="DataManager 使用示例" width="800">
-
-
 
 ## DataCollect
 
-DataCollect 是一套面向多本体的数据采集系统。本仓库将于2025年12月开源。
+DataCollect is a multi-robot data collection system. This repository will be open-sourced in Dec 2025.
 
-- **核心功能**：
-- 多协议数据流接入（ROS1/ROS2、Dora、Sockets）
-- 基于 Lerobot 的统一采集框架
-- 多机器人、多传感器的数据融合
-- 实时采集、校验、提交的完整流程支持
-- 与平台端任务系统、标注系统、模型训练系统的贯通
+- **Core features**:
+  - Multi-protocol streams (ROS1/ROS2, Dora, sockets)
+  - Unified collection framework built on LeRobot
+  - Multi-robot, multi-sensor fusion
+  - Full pipeline for live capture, validation, and submission
+  - Integrations with task system, annotation system, and training pipeline on the platform side
 
-它是将设备端能力与平台端AI能力连接起来的关键桥梁。
+It bridges on-device capabilities with platform AI services.
 
-- **系统框架图**：
+- **System diagram**:
 
-![DataCollect 框架图](assets/DataCollect/Framework.png)
+![DataCollect Framework](assets/DataCollect/Framework_EN.png)
 
-- **数据采集交互界面**：
+- **Data collection UI**:
 
-![DataCollect 框架图](assets/DataCollect/Collect_View.png)
+![DataCollect UI](assets/DataCollect/Collect_View.png)
 
 ## DataConvert
-**DataConvert**是一个专门用于具身数据格式转换的工具集，支持主流具身数据格式RLDS、HDF5LeRobotDataset、JSONL与LeRobot格式的双向转换，满足模型训练的多元化数据格式需求。
-- **数据集入库**：编写数据 `yaml`文件（包含任务名、设备型号、场景、动作等），待校验完成后生成 `info` 元数据并入库。
-- **格式转换**：编写转换配置文件，进行位置文件对齐和帧数检测，通过后执行正式转换，生成标准LeRobot格式数据集（涵盖`parquet`、`mp4` 与 `meta` 文件）。
-- **技术路线概览**：
-  ![RoboCOIN 数据转换](assets/DataConvert/DataConvert_info.png)
+**DataConvert** is a dedicated toolkit for embodied data format conversion, supporting bi-directional transforms among RLDS, HDF5, LeRobotDataset, JSONL, and LeRobot formats to meet diverse training needs.
+- **Dataset ingest**: author dataset `yaml` files (tasks, device models, scenes, actions, etc.), which are validated to produce `info` metadata for ingestion.
+- **Format conversion**: write conversion configs, align pose files and check frame counts, then run the official conversion to produce standard LeRobot datasets (including `parquet`, `mp4`, and `meta`).
+- **Tech overview**:
+  ![RoboCOIN Data Conversion](assets/DataConvert/DataConvert_info_English.png)
 
-  仓库更新中，敬请期待！
+More updates coming soon.
 
 ## DataForge
-**DataForge**是一套用于具身数据筛选和层次化标注的工具链，完成常规数据到高质量**CoRobot**数据的完善。对丢帧、卡顿、花屏、噪点、静止帧、黑白帧、关节信息不齐、时间戳错位等问题进行处理。对场景、任务、运动描述进行标注。
-- **数据前处理**：清除异常或不完整的 `episode`，过滤静止帧、跳帧等问题。
-- **后处理与验证**：修复轨迹抖动、维度错位、字段缺失等质量问题，并通过 `Sim Replay` 进行一致性和可复现性验证。
-- **标注与整合**：进行 `RoboCOIN` 数据集特有的三级层次化标注（场景标注、子任务标注与运动标注），将标注内容编入 `parquet` 与 `meta`文件中，生成最终的高质量 `CoRobot`格式数据。
-- **技术路线概览**： 
-  ![RoboCOIN 数据处理](assets/DataForge/DataForge_info.png)
-- **层次化标注**：
-  ![RoboCOIN 层次化标注](assets/DataForge/Hierarchical_Annotation.png)
-  仓库更新中，敬请期待！
+**DataForge** is a toolkit for embodied data filtering and hierarchical labeling, refining raw data into high-quality **CoRobot** datasets. It handles dropped frames, freezes, artifacts, noise, grayscale frames, joint info gaps, and timestamp misalignment while adding structured labels.
+- **Data pre-processing**: remove abnormal or incomplete episodes; filter static frames, frame drops, and similar issues.
+- **Post-process & validation**: fix trajectory jitter, dimensional mismatch, and missing fields; verify consistency/reproducibility via Sim Replay.
+- **Labeling & integration**: add RoboCOIN-specific three-level labels (scene, sub-task, motion) and embed them into `parquet` and `meta` to produce final CoRobot-format data.
+- **Tech overview**: 
+  ![RoboCOIN Data Processing](assets/DataForge/DataForge_info_English.png)
+- **Hierarchical annotation**:
+  ![RoboCOIN Hierarchical Annotation](assets/DataForge/Hierarchical_Annotation.png)
 
+More updates coming soon.
 
 ## Community
-- **Issues**：欢迎在 [GitHub Issues](https://github.com/FlagOpen/CoRobot/issues) 反馈 bug、需求与数据协议建议。
-- **Discussions**：可在 Discussions（筹备中）进行方案交流与需求共建。
+- **Issues**: Please report bugs, feature requests, or data protocol suggestions in [GitHub Issues](https://github.com/FlagOpen/CoRobot/issues).
+- **Discussions**: Coming soon for solution sharing and co-building.
 
 ## Contributor
-感谢所有贡献者与多本体机器人伙伴！欢迎通过 PR、Issue 或社区讨论参与共建：
+Thanks to all contributors and multi-robot partners! Join via PRs, Issues, or community discussions:
 - FlagOpen / CoRobot Team
-- 社区志愿者
+- Community volunteers
 
 ## Citation
 ```bibtex
@@ -129,4 +126,4 @@ DataCollect 是一套面向多本体的数据采集系统。本仓库将于2025�
 ```
 
 ## License
-CoRobot 主仓库及其子模块遵循各自目录下的许可证条款。若需商业合作或大规模部署授权，请联系项目维护者；统一开源协议将于后续版本公布。
+The main repo and submodules follow the licenses in their respective directories. For commercial use or large-scale deployments, please contact the maintainers; a unified open-source license will be announced in future versions.
