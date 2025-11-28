@@ -88,7 +88,7 @@ DataCollect 是一套面向多本体的数据采集系统。本仓库将于2025�
 ![DataCollect 框架图](assets/DataCollect/Collect_View.png)
 
 ## DataConvert
-**DataConvert**是一个专门用于具身数据格式转换的工具集，支持主流具身数据格式RLDS、HDF5LeRobotDataset、JSONL与LeRobot格式的双向转换，满足模型训练的多元化数据格式需求。
+**DataConvert**是一个专门用于具身数据格式转换的工具集，支持主流具身数据格式RLDS、HDF5、LeRobotDataset、JSONL与LeRobot格式的双向转换，满足模型训练的多元化数据格式需求。
 - **数据集入库**：编写数据 `yaml`文件（包含任务名、设备型号、场景、动作等），待校验完成后生成 `info` 元数据并入库。
 - **格式转换**：编写转换配置文件，进行位置文件对齐和帧数检测，通过后执行正式转换，生成标准LeRobot格式数据集（涵盖`parquet`、`mp4` 与 `meta` 文件）。
 - **技术路线概览**：
