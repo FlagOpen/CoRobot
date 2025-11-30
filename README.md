@@ -61,8 +61,7 @@ RoboCOIN-DataManager is the visualization and management platform for RoboCOIN, 
   ![DataManager Filter & Preview](assets/DataManager/Filter.png)
   
   ![DataManager Download CLI](assets/DataManager/DownloadCLI.png)
-  
-  <video src="assets/DataManager/demons.webm" width="800" autoplay loop muted playsinline></video>
+  <img src="assets/DataManager/how-to-use.gif" alt="DataManager 使用示例" width="800">
 
 ## DataCollect
 

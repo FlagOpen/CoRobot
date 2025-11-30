@@ -62,7 +62,7 @@
   
   ![DataManager 下载命令生成](assets/DataManager/DownloadCLI.png)
 
-  <video src="assets/DataManager/demons.webm" width="800" autoplay loop muted playsinline></video>
+  <img src="assets/DataManager/how-to-use.gif" alt="DataManager 使用示例" width="800">
 
 
 
