@@ -21,7 +21,7 @@
 | [`RoboCOIN`](https://github.com/FlagOpen/RoboCoin) | 数据与模型资产管理 | 多本体双臂操作数据集，16 款本体、20 万+ 轨迹、10+ 场景、1000+ 任务、50+ 技能、500+ 物体。 | 已开源 |
 | [`RoboCOIN-DataManager`](https://github.com/FlagOpen/RoboCOIN-DataManager) | 数据治理 | 数据可视化检索：关键词检索、可视化展示，便于查询与针对性下载。 | 已开源 |
 | DataTrain | 模型训练 | 统一训练工具：支持 OpenPI、RDT、DP 等具身模型的快速接入与训练。 | 暂未开源，敬请期待 |
-| [`DataCollect`](https://github.com/FlagOpen/RoboDriver) | 数据采集 | 一套基于Lerobo框架构建的多本体数据采集系统。 | 已开源 |
+| [`DataCollect`](https://github.com/FlagOpen/RoboDriver) | 数据采集 | 一套基于Lerobo框架构建的多本体数据采集系统，由[RoboDriver](https://github.com/FlagOpen/RoboDriver)、[RoboDriver-Server](https://github.com/FlagOpen/RoboDriver-Server)和[RoboXstudio](https://ei2data.baai.ac.cn/home)三部分组成。 | 已开源 |
 | DataConvert | 数据转化 | 数据格式转化工具：支持 RLDS、HDF5、JSONL 与 LeRobotDataset 的双向转换。 | 暂未开源，敬请期待 |
 | DataForge | 数据处理 | 数据处理工具：缺陷过滤（静止帧、跳帧、维度错位、字段缺失、轨迹抖动）与补充标注（场景、子任务、运动描述）。 | 暂未开源，敬请期待 |
 

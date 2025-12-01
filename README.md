@@ -20,7 +20,7 @@ CoRobot 1.0 is an open embodied-data framework for end-to-end data collection, c
 | [`RoboCOIN`](https://github.com/FlagOpen/RoboCoin) | Data & model asset management | Multi-robot bimanual dataset: 16 robot bodies, 200k+ trajectories, 10+ scenes, 1,000+ tasks, 50+ skills, 500+ objects. | Open-sourced |
 | [`RoboCOIN-DataManager`](https://github.com/FlagOpen/RoboCOIN-DataManager) | Data governance | Visual search: keyword search, visualization, helps targeted downloads. | Open-sourced |
 | DataTrain | Model training | Unified training tools: quick integration/training for embodied models like OpenPI, RDT, DP. | Coming soon |
-| [`DataCollect`](https://github.com/FlagOpen/RoboDriver) | Data collection | A multi-robot data collection system built on the LeRobot framework. | Open-sourced |
+| [`DataCollect`](https://github.com/FlagOpen/RoboDriver) | Data collection | A multi-robot data collection system built on LeRobot, composed of [RoboDriver](https://github.com/FlagOpen/RoboDriver), [RoboDriver-Server](https://github.com/FlagOpen/RoboDriver-Server), and [RoboXstudio](https://ei2data.baai.ac.cn/home). | Open-sourced |
 | DataConvert | Data conversion | Conversion toolkit: bi-directional transforms among RLDS, HDF5, JSONL, and LeRobotDataset. | Coming soon |
 | DataForge | Data processing | Processing toolkit: defect filtering (static frames, frame drops, dimensional mismatch, missing fields, jitter) and enrichment labels (scene, sub-task, motion description). | Coming soon |
 
