@@ -4,5 +4,9 @@
 	branch = main
 [submodule "DataManager"]
 	path = DataManager
-	url = https://github.com/FlagOpen/RoboCOIN-DataManager
+	url = https://github.com/FlagOpen/RoboCOIN-DataManager.git
+	branch = main
+[submodule "RoboCollect"]
+	path = RoboCollect
+	url = https://github.com/FlagOpen/RoboDriver.git
 	branch = main
