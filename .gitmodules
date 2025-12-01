@@ -5,3 +5,4 @@
 [submodule "DataManager"]
 	path = DataManager
 	url = https://github.com/FlagOpen/RoboCOIN-DataManager
+	branch = main
