@@ -20,7 +20,7 @@ CoRobot 1.0 is an open embodied-data framework for end-to-end data collection, c
 | [`RoboCOIN`](https://github.com/FlagOpen/RoboCoin) | Data & model asset management | Multi-robot bimanual dataset: 16 robot bodies, 200k+ trajectories, 10+ scenes, 1,000+ tasks, 50+ skills, 500+ objects. | Open-sourced |
 | [`RoboCOIN-DataManager`](https://github.com/FlagOpen/RoboCOIN-DataManager) | Data governance | Visual search: keyword search, visualization, helps targeted downloads. | Open-sourced |
 | DataTrain | Model training | Unified training tools: quick integration/training for embodied models like OpenPI, RDT, DP. | Coming soon |
-| DataCollect | Data collection | Multi-robot collection tools: supports various robot bodies and teleoperation; integrated with vendors like RMY, SLAMTEC, Galactic, Unitree, Leju, Xinhaitu, Lingyu, ZhiYuan, etc. | Coming soon |
+| [`DataCollect`](https://github.com/FlagOpen/RoboDriver) | Data collection | A multi-robot data collection system built on the LeRobot framework. | Open-sourced |
 | DataConvert | Data conversion | Conversion toolkit: bi-directional transforms among RLDS, HDF5, JSONL, and LeRobotDataset. | Coming soon |
 | DataForge | Data processing | Processing toolkit: defect filtering (static frames, frame drops, dimensional mismatch, missing fields, jitter) and enrichment labels (scene, sub-task, motion description). | Coming soon |
 
@@ -65,7 +65,7 @@ RoboCOIN-DataManager is the visualization and management platform for RoboCOIN, 
 
 ## DataCollect
 
-DataCollect is a multi-robot data collection system. This repository will be open-sourced in Dec 2025.
+**DataCollect** is a multi-robot data collection system built on the LeRobot framework. It consists of [RoboDriver](https://github.com/FlagOpen/RoboDriver), [RoboDriver-Server](https://github.com/FlagOpen/RoboDriver-Server), and [RoboXstudio](https://ei2data.baai.ac.cn/home): **RoboDriver** provides a development toolkit for robot drivers with a multi-protocol data-ingestion framework; **RoboXstudio** is an all-in-one embodied data platform for task dispatch, data management, and annotation; **RoboDriver-Server** bridges RoboDriver and RoboXstudio to forward and sync data.
 
 - **Core features**:
   - Multi-protocol streams (ROS1/ROS2, Dora, sockets)
